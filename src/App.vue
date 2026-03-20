@@ -37,49 +37,49 @@ const dates = [
 const organizers = [
   {
     name: 'Hao Li',
-    initials: 'HL',
+    photo: '/images/haoli.jpg',
     affiliation: 'Queen\'s University',
     role: 'Main Contact',
     bio: 'Postdoctoral Fellow at Queen\'s University. Co-Chair of the MSR 2026 Mining Challenge. Research focuses on agentic workflows at the intersection of Software Engineering and AI. Serves on PCs for ICSE, FSE, ASE, ICSME, SANER, and AIware.',
   },
   {
     name: 'Haoxiang Zhang',
-    initials: 'HZ',
+    photo: '/images/haoxiangzhang.jpg',
     affiliation: 'Queen\'s University',
     role: '',
     bio: 'Adjunct Research Associate at Queen\'s University. Specializes in mining large-scale software repositories and building AI-driven analytics. Co-Chair of the MSR 2026 Mining Challenge.',
   },
   {
     name: 'Jie M. Zhang',
-    initials: 'JZ',
+    photo: '/images/jiezhang.jpg',
     affiliation: 'King\'s College London',
     role: '',
     bio: 'Lecturer at King\'s College London and visiting AI scientist at Mistral AI. Winner of the 2025 ACM SIGSOFT Early Research Award. PC Co-Chair for ASE 2027 and ISSRE 2026. Named one of the Top 15 Global Chinese Female Young Scholars in Interdisciplinary AI (2023).',
   },
   {
     name: 'Yiling Lou',
-    initials: 'YL',
+    photo: '/images/yilinglou.jpg',
     affiliation: 'UIUC',
     role: '',
     bio: 'Assistant Professor in the Siebel School of Computing and Data Science at UIUC. Research on LLMs for code, software agents, and trustworthiness. Program Co-Chair for LLM4Code (2024–2026) and AIware (2025). Multiple ACM SIGSOFT and IEEE TCSE Distinguished Paper Awards.',
   },
   {
     name: 'Baishakhi Ray',
-    initials: 'BR',
+    photo: '/images/baishakhiray.jpg',
     affiliation: 'Columbia University',
     role: '',
     bio: 'Associate Professor at Columbia University working at the intersection of AI, Software Engineering, and Security. Recipient of IEEE TCSE Rising Star, NSF CAREER, IBM Faculty, and VMWare Faculty awards. Amazon Visiting Academic.',
   },
   {
     name: 'Thomas Zimmermann',
-    initials: 'TZ',
+    photo: '/images/thomaszimmermann.jpg',
     affiliation: 'UC Irvine',
     role: '',
     bio: 'Chancellor\'s Professor and Bren Chair at UC Irvine. 20+ years of experience, 100+ publications cited 30,000+ times. Fellow of ACM, IEEE, and AAAS. Recipient of the IEEE TCSE Edward J. McCluskey Technical Achievement Award.',
   },
   {
     name: 'Ahmed E. Hassan',
-    initials: 'AH',
+    photo: '/images/ahmedhassan.jpg',
     affiliation: 'Queen\'s University',
     role: '',
     bio: 'Mustafa Prize Laureate. Fellow of ACM, IEEE, and AAIA. Canada Research Chair in Software Engineering. Founder of the AI-Augmented SE, MSR, and AIware communities. Member of the Royal Society of Canada. The only person to receive both the ACM SIGSOFT Influential Educator Award (2019) and the IEEE TCSE Distinguished Educator Award (2020).',
@@ -144,7 +144,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   </nav>
 
   <!-- Hero -->
-  <section id="home" class="hero-section">
+  <section id="home" class="hero-section" style="background-image: url('/images/background.jpg');">
     <div class="container position-relative" style="z-index: 1;">
       <div class="row">
         <div class="col-lg-9">
@@ -303,7 +303,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
       <div class="row g-4">
         <div class="col-6 col-md-4 col-lg-3" v-for="o in organizers" :key="o.name">
           <div class="organizer-card">
-            <div class="avatar">{{ o.initials }}</div>
+            <img class="avatar" :src="o.photo" :alt="o.name">
             <h5>{{ o.name }}</h5>
             <p class="affiliation">{{ o.affiliation }}</p>
             <span v-if="o.role" class="role-badge">{{ o.role }}</span>

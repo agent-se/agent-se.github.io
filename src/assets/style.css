@@ -50,7 +50,9 @@ body {
 
 /* Hero */
 .hero-section {
-  background: var(--gradient-hero);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   min-height: 85vh;
   display: flex;
   align-items: center;
@@ -61,12 +63,10 @@ body {
 .hero-section::before {
   content: '';
   position: absolute;
-  top: -50%;
-  right: -20%;
-  width: 80%;
-  height: 200%;
-  background: radial-gradient(ellipse, rgba(0, 188, 212, 0.08) 0%, transparent 70%);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
   pointer-events: none;
+  z-index: 0;
 }
 
 .hero-section::after {
@@ -76,8 +76,9 @@ body {
   left: 0;
   right: 0;
   height: 120px;
-  background: linear-gradient(transparent, rgba(13, 27, 42, 0.6));
+  background: linear-gradient(transparent, rgba(13, 27, 42, 0.5));
   pointer-events: none;
+  z-index: 0;
 }
 
 .hero-title {
@@ -86,6 +87,7 @@ body {
   line-height: 1.15;
   color: #fff;
   margin-bottom: 0.5rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 0, 0, 0.4);
 }
 
 .hero-subtitle {
@@ -93,11 +95,13 @@ body {
   color: var(--accent);
   font-weight: 600;
   margin-bottom: 1.2rem;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
 }
 
 .hero-meta {
   font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
 }
 
 .hero-meta i {
@@ -107,8 +111,8 @@ body {
 
 .hero-badge {
   display: inline-block;
-  background: rgba(0, 188, 212, 0.15);
-  border: 1px solid rgba(0, 188, 212, 0.3);
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 188, 212, 0.4);
   color: var(--accent);
   padding: 0.35rem 1rem;
   border-radius: 30px;
@@ -116,6 +120,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.05em;
   margin-bottom: 1.5rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* Sections */
@@ -199,14 +204,11 @@ body {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary-light), var(--accent));
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  object-fit: cover;
   margin: 0 auto 1rem;
-  font-size: 2.5rem;
-  color: #fff;
-  font-weight: 700;
+  display: block;
+  border: 3px solid #e8edf2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .organizer-card h5 {
