@@ -166,6 +166,9 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
             Anchored by the <strong style="color: var(--accent);">AIDev dataset</strong> — over one million agentic pull requests
             from Claude Code, OpenAI Codex, and GitHub Copilot.
           </p>
+          <a href="https://kdd2026.kdd.org" target="_blank" rel="noopener" class="btn-register">
+            <i class="bi bi-box-arrow-up-right"></i> Register at KDD 2026
+          </a>
         </div>
       </div>
     </div>

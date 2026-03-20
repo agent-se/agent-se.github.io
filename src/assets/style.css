@@ -109,6 +109,34 @@ body {
   margin-right: 0.35rem;
 }
 
+.btn-register {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 1rem 2.5rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--accent);
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  box-shadow: 0 4px 20px rgba(232, 189, 109, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-register:hover {
+  background: #d4a84e;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(232, 189, 109, 0.55);
+  text-decoration: none;
+}
+
+.btn-register i {
+  margin-right: 0.5rem;
+}
+
 .hero-badge {
   display: inline-block;
   background: rgba(0, 0, 0, 0.4);
