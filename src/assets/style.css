@@ -229,8 +229,8 @@ body {
 }
 
 .organizer-card .avatar {
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
   margin: 0 auto 1rem;

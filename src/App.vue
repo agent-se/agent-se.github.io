@@ -6,10 +6,9 @@ const navCollapsed = ref(true)
 
 const sections = [
   { id: 'home', label: 'Home' },
-  { id: 'topics', label: 'Topics' },
+  { id: 'submission', label: 'Call for Papers' },
   { id: 'dates', label: 'Important Dates' },
   { id: 'program', label: 'Program' },
-  { id: 'submission', label: 'Submission' },
   { id: 'organizers', label: 'Organizers' },
 ]
 
@@ -27,23 +26,23 @@ const topics = [
 ]
 
 const dates = [
-  { date: 'April 9, 2026', event: 'Workshop Website & CFP Online' },
-  { date: 'April 30, 2026', event: 'Paper Submission Deadline' },
-  { date: 'June 4, 2026', event: 'Notification of Acceptance' },
-  { date: 'June 22, 2026', event: 'Final Program Online' },
-  { date: 'Aug 9–13, 2026', event: 'Workshop @ KDD 2026, Jeju, Korea' },
+  { date: 'TBD', event: 'Paper Submission Deadline' },
+  { date: 'TBD', event: 'Notification of Acceptance' },
+  { date: 'TBD', event: 'Workshop @ KDD 2026, Jeju, Korea' },
 ]
 
 const organizers = [
   {
     name: 'Hao Li',
+    website: 'https://leo-lihao.github.io',
     photo: '/images/haoli.jpg',
     affiliation: 'Queen\'s University',
-    role: 'Main Contact',
+    role: '',
     bio: 'Postdoctoral Fellow at Queen\'s University. Co-Chair of the MSR 2026 Mining Challenge. Research focuses on agentic workflows at the intersection of Software Engineering and AI. Serves on PCs for ICSE, FSE, ASE, ICSME, SANER, and AIware.',
   },
   {
     name: 'Haoxiang Zhang',
+    website: 'https://haoxianghz.gitlab.io',
     photo: '/images/haoxiangzhang.jpg',
     affiliation: 'Queen\'s University',
     role: '',
@@ -51,6 +50,7 @@ const organizers = [
   },
   {
     name: 'Jie M. Zhang',
+    website: 'https://sites.google.com/view/jie-zhang',
     photo: '/images/jiezhang.jpg',
     affiliation: 'King\'s College London',
     role: '',
@@ -58,6 +58,7 @@ const organizers = [
   },
   {
     name: 'Yiling Lou',
+    website: 'https://yilinglou.github.io/',
     photo: '/images/yilinglou.jpg',
     affiliation: 'UIUC',
     role: '',
@@ -65,6 +66,7 @@ const organizers = [
   },
   {
     name: 'Baishakhi Ray',
+    website: 'https://rayb.info/',
     photo: '/images/baishakhiray.jpg',
     affiliation: 'Columbia University',
     role: '',
@@ -72,6 +74,7 @@ const organizers = [
   },
   {
     name: 'Thomas Zimmermann',
+    website: 'https://thomas-zimmermann.com/',
     photo: '/images/thomaszimmermann.jpg',
     affiliation: 'UC Irvine',
     role: '',
@@ -79,6 +82,7 @@ const organizers = [
   },
   {
     name: 'Ahmed E. Hassan',
+    website: 'https://research.cs.queensu.ca/home/ahmed/home/',
     photo: '/images/ahmedhassan.jpg',
     affiliation: 'Queen\'s University',
     role: '',
@@ -155,15 +159,15 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
           </h1>
           <p class="hero-subtitle">The Rise of AI Teammates</p>
           <p class="hero-meta mb-2">
-            <i class="bi bi-calendar-event"></i> August 9–13, 2026
+            <i class="bi bi-calendar-event"></i> August TBD, 2026
             <span class="mx-2">|</span>
             <i class="bi bi-geo-alt"></i> Jeju, Korea
             <span class="mx-2">|</span>
-            <i class="bi bi-clock"></i> Half-Day (~3 hours)
+            <i class="bi bi-clock"></i> Half-Day
           </p>
           <p class="hero-meta" style="max-width: 700px; margin-top: 1.5rem; font-size: 0.95rem; line-height: 1.7;">
-            Co-located with the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining.
-            Anchored by the <strong style="color: var(--accent);">AIDev dataset</strong> — over one million agentic pull requests
+            Co-located with the <a href="https://kdd2026.kdd.org/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">ACM SIGKDD 2026</a>.
+            Anchored by the <a href="https://huggingface.co/datasets/hao-li/AIDev" target="_blank" rel="noopener noreferrer" style="color: var(--accent); font-weight: bold; text-decoration: none;">AIDev dataset</a> — over one million agentic pull requests
             from Claude Code, OpenAI Codex, and GitHub Copilot.
           </p>
           <a href="https://kdd2026.kdd.org" target="_blank" rel="noopener" class="btn-register">
@@ -190,7 +194,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
           </p>
           <p style="font-size: 1.02rem; color: var(--text-muted);">
             This workshop serves as the premier forum for addressing these challenges, anchored by the
-            launch of the <strong>AIDev dataset</strong>. Comprising over one million agentic pull requests generated
+            launch of the <a href="https://huggingface.co/datasets/hao-li/AIDev" target="_blank" rel="noopener noreferrer" style="font-weight: bold; color: inherit; text-decoration: underline;">AIDev dataset</a>. Comprising over one million agentic pull requests generated
             by AI Teammates such as Claude Code, OpenAI Codex, and GitHub Copilot, AIDev provides the
             empirical evidence needed to understand the behaviors of AI Teammates. This workshop features
             insights from major industry players and academic pioneers, and aims to define a roadmap for
@@ -201,19 +205,34 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
     </div>
   </section>
 
-  <!-- Topics -->
-  <section id="topics" class="section section-alt">
+  <!-- Submission / CTA -->
+  <section id="submission" class="section section-alt">
     <div class="container">
-      <h2 class="section-title">Topics of Interest</h2>
+      <h2 class="section-title">Call for Papers</h2>
       <hr class="section-divider">
-      <div class="row g-3">
-        <div class="col-md-6 col-lg-4" v-for="t in topics" :key="t.title">
-          <div class="topic-card">
-            <h6 class="mb-1">
-              <i :class="'bi ' + t.icon"></i>
-              {{ t.title }}
-            </h6>
-            <p class="mb-0 small text-muted">{{ t.desc }}</p>
+      <div>
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <p style="opacity: 0.9; font-size: 0.98rem; line-height: 1.8;">
+              We invite submissions of original research papers, position papers, and demo papers
+              on the following topics of interest. Papers should follow the ACM KDD format.
+              All accepted papers will be presented at the workshop.
+            </p>
+            <h5 class="fw-bold mt-4 mb-2">Topics of Interest:</h5>
+            <ul style="opacity: 0.85; font-size: 0.92rem;" class="mb-4">
+              <li v-for="t in topics" :key="t.title" class="mb-1">
+                <strong>{{ t.title }}</strong>: {{ t.desc }}
+              </li>
+            </ul>
+            <h5 class="fw-bold mt-4 mb-2">Submission Guidelines:</h5>
+            <ul style="opacity: 0.85; font-size: 0.92rem;" class="mb-3">
+              <li>Long papers: up to 8 pages (excluding references)</li>
+              <li>Short / position papers: up to 4 pages (excluding references)</li>
+              <li>Format: <a href="https://kdd2026.kdd.org/research-track-call-for-papers/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">ACM double-column (KDD 2026 template)</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+            <p class="mb-2" style="opacity: 0.7; font-size: 0.85rem;">Submission portal coming soon</p>
           </div>
         </div>
       </div>
@@ -243,8 +262,8 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
     <div class="container">
       <h2 class="section-title">Program Sketch</h2>
       <hr class="section-divider">
-      <p class="mb-4 text-muted">Half-day workshop (~3 hours). Detailed schedule to be announced.</p>
-      <div class="col-lg-10">
+      <p class="mb-4 text-muted">Half-day workshop. Detailed schedule to be announced.</p>
+      <!-- <div class="col-lg-10">
         <table class="table program-table">
           <thead>
             <tr>
@@ -263,51 +282,25 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
             <tr><td>TBD</td><td>Closing Remarks</td></tr>
           </tbody>
         </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- Submission / CTA -->
-  <section id="submission" class="section">
-    <div class="container">
-      <h2 class="section-title">Call for Papers</h2>
-      <hr class="section-divider">
-      <div class="cta-box">
-        <div class="row align-items-center">
-          <div class="col-lg-8">
-            <h3 class="fw-bold mb-3">Submit Your Work</h3>
-            <p style="opacity: 0.9; font-size: 0.98rem; line-height: 1.8;">
-              We invite submissions of original research papers, position papers, and demo papers
-              on any of the workshop topics. Papers should follow the ACM KDD format.
-              All accepted papers will be presented at the workshop.
-            </p>
-            <ul style="opacity: 0.85; font-size: 0.92rem;" class="mb-3">
-              <li>Long papers: up to 8 pages (excluding references)</li>
-              <li>Short / position papers: up to 4 pages (excluding references)</li>
-              <li>Format: ACM double-column (KDD 2026 template)</li>
-            </ul>
-          </div>
-          <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
-            <p class="mb-2" style="opacity: 0.7; font-size: 0.85rem;">Submission portal coming soon</p>
-            <a class="btn btn-accent btn-lg" href="#dates" @click.prevent="scrollTo('dates')">
-              <i class="bi bi-calendar3 me-2"></i>View Deadlines
-            </a>
-          </div>
-        </div>
-      </div>
+      </div> -->
     </div>
   </section>
 
   <!-- Organizers -->
-  <section id="organizers" class="section section-alt">
+  <section id="organizers" class="section">
     <div class="container">
       <h2 class="section-title">Organizing Committee</h2>
       <hr class="section-divider">
-      <div class="row g-4">
+      <div class="row g-4 justify-content-center">
         <div class="col-6 col-md-4 col-lg-3" v-for="o in organizers" :key="o.name">
           <div class="organizer-card">
             <img class="avatar" :src="o.photo" :alt="o.name">
-            <h5>{{ o.name }}</h5>
+            <h5>
+              <a v-if="o.website" :href="o.website" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">
+                {{ o.name }}
+              </a>
+              <template v-else>{{ o.name }}</template>
+            </h5>
             <p class="affiliation">{{ o.affiliation }}</p>
             <span v-if="o.role" class="role-badge">{{ o.role }}</span>
             <div v-if="expandedBios[o.name]" class="bio-text">{{ o.bio }}</div>
@@ -321,28 +314,6 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
     </div>
   </section>
 
-  <!-- References -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Key References</h2>
-      <hr class="section-divider">
-      <div class="col-lg-10">
-        <ol style="font-size: 0.95rem; line-height: 1.9;">
-          <li>
-            A. E. Hassan, H. Li, H. Zhang.
-            <em>Agentic Software Engineering: Foundational Pillars and a Research Roadmap.</em>
-            arXiv:2509.06216, 2025.
-          </li>
-          <li>
-            H. Li, H. Zhang, A. E. Hassan.
-            <em>The Rise of AI Teammates in Software Engineering (SE) 3.0.</em>
-            arXiv:2507.15003, 2025.
-          </li>
-        </ol>
-      </div>
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container text-center">
@@ -351,10 +322,13 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
       </p>
       <p class="mb-1">
         <i class="bi bi-geo-alt me-1"></i> Jeju, Korea &middot;
-        <i class="bi bi-calendar3 ms-2 me-1"></i> August 9–13, 2026
+        <i class="bi bi-calendar3 ms-2 me-1"></i> August TBD, 2026
+      </p>
+      <p class="mb-3 mt-3" style="font-size: 0.9rem;">
+        <strong>Contact us:</strong> Please send questions and enquiries to <a href="mailto:hao.li@queensu.ca" style="color: inherit; text-decoration: underline;">hao.li@queensu.ca</a>
       </p>
       <p class="mb-0" style="font-size: 0.82rem; opacity: 0.6;">
-        &copy; 2026 Agentic SE Workshop. Co-located with ACM SIGKDD 2026.
+        &copy; 2026 Agentic SE Workshop. Co-located with <a href="https://kdd2026.kdd.org/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">ACM SIGKDD 2026</a>.
       </p>
     </div>
   </footer>
