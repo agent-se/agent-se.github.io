@@ -42,7 +42,7 @@ const organizers = [
   },
   {
     name: 'Haoxiang Zhang',
-    website: 'https://haoxianghz.gitlab.io',
+    website: 'https://haoxianghz.gitlab.io/homepage/',
     photo: '/images/haoxiangzhang.jpg',
     objectPosition: 'center 15%',
     affiliation: 'Queen\'s University',
@@ -91,12 +91,6 @@ const organizers = [
     bio: 'Mustafa Prize Laureate. Fellow of ACM, IEEE, and AAIA. Canada Research Chair in Software Engineering. Founder of the AI-Augmented SE, MSR, and AIware communities. Member of the Royal Society of Canada. The only person to receive both the ACM SIGSOFT Influential Educator Award (2019) and the IEEE TCSE Distinguished Educator Award (2020).',
   },
 ]
-
-const expandedBios = ref({})
-
-function toggleBio(name) {
-  expandedBios.value[name] = !expandedBios.value[name]
-}
 
 function scrollTo(id) {
   navCollapsed.value = true
@@ -312,11 +306,6 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
             </h5>
             <p class="affiliation">{{ o.affiliation }}</p>
             <span v-if="o.role" class="role-badge">{{ o.role }}</span>
-            <div v-if="expandedBios[o.name]" class="bio-text">{{ o.bio }}</div>
-            <button class="bio-toggle" @click="toggleBio(o.name)">
-              {{ expandedBios[o.name] ? 'Less' : 'Bio' }}
-              <i :class="expandedBios[o.name] ? 'bi bi-chevron-up' : 'bi bi-chevron-down'" style="font-size: 0.7rem;"></i>
-            </button>
           </div>
         </div>
       </div>
