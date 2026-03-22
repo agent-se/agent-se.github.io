@@ -44,6 +44,7 @@ const organizers = [
     name: 'Haoxiang Zhang',
     website: 'https://haoxianghz.gitlab.io',
     photo: '/images/haoxiangzhang.jpg',
+    objectPosition: 'center 15%',
     affiliation: 'Queen\'s University',
     role: '',
     bio: 'Adjunct Research Associate at Queen\'s University. Specializes in mining large-scale software repositories and building AI-driven analytics. Co-Chair of the MSR 2026 Mining Challenge.',
@@ -52,6 +53,7 @@ const organizers = [
     name: 'Jie M. Zhang',
     website: 'https://sites.google.com/view/jie-zhang',
     photo: '/images/jiezhang.jpg',
+    objectPosition: 'center 15%',
     affiliation: 'King\'s College London',
     role: '',
     bio: 'Lecturer at King\'s College London and visiting AI scientist at Mistral AI. Winner of the 2025 ACM SIGSOFT Early Research Award. PC Co-Chair for ASE 2027 and ISSRE 2026. Named one of the Top 15 Global Chinese Female Young Scholars in Interdisciplinary AI (2023).',
@@ -147,15 +149,15 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section id="home" class="hero-section" style="background-image: url('/images/background.jpg');">
+  <!-- Hero Text -->
+  <section id="home" class="hero-text-section pt-5 mt-5 pb-4">
     <div class="container position-relative" style="z-index: 1;">
       <div class="row">
-        <div class="col-lg-9">
+        <div class="col-lg-10">
           <span class="hero-badge">KDD 2026 Workshop</span>
           <h1 class="hero-title">
             Agentic Software Engineering
-            <span style="color: var(--accent);">(SE 3.0)</span>
+            <span style="color: var(--accent-dark);">(SE 3.0)</span>
           </h1>
           <p class="hero-subtitle">The Rise of AI Teammates</p>
           <p class="hero-meta mb-2">
@@ -165,9 +167,9 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
             <span class="mx-2">|</span>
             <i class="bi bi-clock"></i> Half-Day
           </p>
-          <p class="hero-meta" style="max-width: 700px; margin-top: 1.5rem; font-size: 0.95rem; line-height: 1.7;">
+          <p class="hero-meta" style="max-width: 800px; margin-top: 1.5rem; font-size: 1.05rem; line-height: 1.7;">
             Co-located with the <a href="https://kdd2026.kdd.org/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">ACM SIGKDD 2026</a>.
-            Anchored by the <a href="https://huggingface.co/datasets/hao-li/AIDev" target="_blank" rel="noopener noreferrer" style="color: var(--accent); font-weight: bold; text-decoration: none;">AIDev dataset</a> — over one million agentic pull requests
+            Anchored by the <a href="https://huggingface.co/datasets/hao-li/AIDev" target="_blank" rel="noopener noreferrer" style="color: var(--accent-dark); font-weight: bold; text-decoration: none;">AIDev dataset</a> — over one million agentic pull requests
             from Claude Code, OpenAI Codex, and GitHub Copilot.
           </p>
           <a href="https://kdd2026.kdd.org" target="_blank" rel="noopener" class="btn-register">
@@ -175,6 +177,13 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
           </a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Hero Image -->
+  <section class="hero-image-section mb-5">
+    <div class="container">
+      <div class="hero-image-container"></div>
     </div>
   </section>
 
@@ -294,7 +303,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
       <div class="row g-4 justify-content-center">
         <div class="col-6 col-md-4 col-lg-3" v-for="o in organizers" :key="o.name">
           <div class="organizer-card">
-            <img class="avatar" :src="o.photo" :alt="o.name">
+            <img class="avatar" :src="o.photo" :alt="o.name" :style="o.objectPosition ? { objectPosition: o.objectPosition } : {}">
             <h5>
               <a v-if="o.website" :href="o.website" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">
                 {{ o.name }}
