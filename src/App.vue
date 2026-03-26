@@ -92,6 +92,15 @@ const organizers = [
   },
 ]
 
+const webChair = {
+  name: 'Zhimin Zhao',
+  photo: '/images/zhiminzhao.jpg',
+  affiliation: 'Queen\'s University',
+  role: 'Web Chair',
+  bio: 'PhD candidate in the Software Analysis and Intelligence Lab (SAIL) at Queen\'s University. MSE from the SIG Center for Computer Graphics, University of Pennsylvania. Research interests include LLMOps, MLOps, and SE4AI.',
+  website: 'https://zhimin-z.github.io',
+}
+
 function scrollTo(id) {
   navCollapsed.value = true
   const el = document.getElementById(id)
@@ -306,6 +315,22 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
             </h5>
             <p class="affiliation">{{ o.affiliation }}</p>
             <span v-if="o.role" class="role-badge">{{ o.role }}</span>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-subtitle mt-5">Web Chair</h3>
+      <div class="row g-4 justify-content-center">
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="organizer-card">
+            <img class="avatar" :src="webChair.photo" :alt="webChair.name">
+            <h5>
+              <a :href="webChair.website" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">
+                {{ webChair.name }}
+              </a>
+            </h5>
+            <p class="affiliation">{{ webChair.affiliation }}</p>
+            <span class="role-badge">{{ webChair.role }}</span>
           </div>
         </div>
       </div>
