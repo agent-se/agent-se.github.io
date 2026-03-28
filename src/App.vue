@@ -319,8 +319,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
         </div>
       </div>
 
-      <h3 class="section-subtitle mt-5">Web Chair</h3>
-      <div class="row g-4 justify-content-center">
+      <div class="row g-4 justify-content-center mt-4">
         <div class="col-6 col-md-4 col-lg-3">
           <div class="organizer-card">
             <img class="avatar" :src="webChair.photo" :alt="webChair.name">
