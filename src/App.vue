@@ -50,6 +50,14 @@ const organizers = [
     bio: 'Adjunct Research Associate at Queen\'s University. Specializes in mining large-scale software repositories and building AI-driven analytics. Co-Chair of the MSR 2026 Mining Challenge.',
   },
   {
+    name: 'Zhimin Zhao',
+    website: 'https://zhimin-z.github.io',
+    photo: '/images/zhiminzhao.jpg',
+    affiliation: 'Queen\'s University',
+    role: '',
+    bio: 'PhD candidate in the Software Analysis and Intelligence Lab (SAIL) at Queen\'s University. MSE from the SIG Center for Computer Graphics, University of Pennsylvania. Research interests include LLMOps, MLOps, and SE4AI.',
+  },
+  {
     name: 'Jie M. Zhang',
     website: 'https://sites.google.com/view/jie-zhang',
     photo: '/images/jiezhang.jpg',
