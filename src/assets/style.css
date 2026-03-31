@@ -231,7 +231,8 @@ body {
   font-weight: 600;
   font-size: 0.85rem;
   white-space: nowrap;
-  min-width: 140px;
+  width: 170px;
+  flex-shrink: 0;
   text-align: center;
 }
 

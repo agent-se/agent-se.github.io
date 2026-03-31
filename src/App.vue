@@ -26,7 +26,8 @@ const topics = [
 ]
 
 const dates = [
-  { date: 'April 30th, 2026', event: 'Workshop Paper Submission' },
+  { date: 'April 30th, 2026', event: 'Workshop Abstract Submission' },
+  { date: 'May 7th, 2026', event: 'Workshop Paper Submission' },
   { date: 'June 4th, 2026', event: 'Workshop Paper Notification' },
   { date: 'August 10th, 2026', event: 'Workshop @ KDD 2026, Jeju, Korea' },
 ]
@@ -298,7 +299,10 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
       <div class="row g-4 justify-content-center">
         <div class="col-6 col-md-4 col-lg-3" v-for="o in organizers" :key="o.name">
           <div class="organizer-card">
-            <img class="avatar" :src="o.photo" :alt="o.name" :style="o.objectPosition ? { objectPosition: o.objectPosition } : {}">
+            <a v-if="o.website" :href="o.website" target="_blank" rel="noopener noreferrer">
+              <img class="avatar" :src="o.photo" :alt="o.name" :style="o.objectPosition ? { objectPosition: o.objectPosition } : {}">
+            </a>
+            <img v-else class="avatar" :src="o.photo" :alt="o.name" :style="o.objectPosition ? { objectPosition: o.objectPosition } : {}">
             <h5>
               <a v-if="o.website" :href="o.website" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">
                 {{ o.name }}
