@@ -26,9 +26,9 @@ const topics = [
 ]
 
 const dates = [
-  { date: 'TBD', event: 'Paper Submission Deadline' },
-  { date: 'TBD', event: 'Notification of Acceptance' },
-  { date: 'TBD', event: 'Workshop @ KDD 2026, Jeju, Korea' },
+  { date: 'April 30th, 2026', event: 'Workshop Paper Submission' },
+  { date: 'June 4th, 2026', event: 'Workshop Paper Notification' },
+  { date: 'August 10th, 2026', event: 'Workshop @ KDD 2026, Jeju, Korea' },
 ]
 
 const organizers = [
@@ -156,7 +156,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
           </h1>
           <p class="hero-subtitle">The Rise of AI Teammates</p>
           <p class="hero-meta mb-2">
-            <i class="bi bi-calendar-event"></i> August TBD, 2026
+            <i class="bi bi-calendar-event"></i> August 10th, 2026
             <span class="mx-2">|</span>
             <i class="bi bi-geo-alt"></i> Jeju, Korea
             <span class="mx-2">|</span>
@@ -322,7 +322,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
       </p>
       <p class="mb-1">
         <i class="bi bi-geo-alt me-1"></i> Jeju, Korea &middot;
-        <i class="bi bi-calendar3 ms-2 me-1"></i> August TBD, 2026
+        <i class="bi bi-calendar3 ms-2 me-1"></i> August 10th, 2026
       </p>
       <p class="mb-3 mt-3" style="font-size: 0.9rem;">
         <strong>Contact us:</strong> Please send questions and enquiries to <a href="mailto:hao.li@queensu.ca" style="color: inherit; text-decoration: underline;">hao.li@queensu.ca</a>
