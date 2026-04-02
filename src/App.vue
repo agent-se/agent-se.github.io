@@ -236,11 +236,11 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
               <li>Format: <a href="https://kdd2026.kdd.org/research-track-call-for-papers/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">ACM double-column (KDD 2026 template)</a></li>
             </ul>
           </div>
-          <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
-            <a href="https://openreview.net/group?id=KDD.org/2026/Workshop/AgenticSE" target="_blank" rel="noopener" class="btn-register" style="font-size: 1.1rem; padding: 0.8rem 2rem;">
-              <i class="bi bi-pencil-square"></i> Submit on OpenReview
-            </a>
-          </div>
+        </div>
+        <div class="text-center mt-4">
+          <a href="https://openreview.net/group?id=KDD.org/2026/Workshop/AgenticSE" target="_blank" rel="noopener" class="btn-register" style="font-size: 1.2rem; padding: 1rem 2.5rem;">
+            <i class="bi bi-pencil-square"></i> Submit on OpenReview
+          </a>
         </div>
       </div>
     </div>
