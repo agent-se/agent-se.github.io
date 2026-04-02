@@ -238,7 +238,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
           </div>
         </div>
         <div class="text-center mt-4">
-          <a href="https://openreview.net/group?id=KDD.org/2026/Workshop/AgenticSE" target="_blank" rel="noopener" class="btn-register" style="font-size: 1.2rem; padding: 1rem 2.5rem;">
+          <a href="https://openreview.net/group?id=KDD.org/2026/Workshop/AgenticSE" target="_blank" rel="noopener noreferrer" class="btn-register" style="font-size: 1.2rem; padding: 1rem 2.5rem;">
             <i class="bi bi-pencil-square"></i> Submit on OpenReview
           </a>
         </div>
