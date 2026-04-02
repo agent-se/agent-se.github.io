@@ -237,7 +237,9 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
             </ul>
           </div>
           <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
-            <p class="mb-2" style="opacity: 0.7; font-size: 0.85rem;">Submission portal coming soon</p>
+            <a href="https://openreview.net/group?id=KDD.org/2026/Workshop/AgenticSE" target="_blank" rel="noopener" class="btn-register" style="font-size: 1.1rem; padding: 0.8rem 2rem;">
+              <i class="bi bi-pencil-square"></i> Submit on OpenReview
+            </a>
           </div>
         </div>
       </div>
