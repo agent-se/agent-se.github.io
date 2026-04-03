@@ -232,8 +232,9 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
             <h5 class="fw-bold mt-4 mb-2">Submission Guidelines:</h5>
             <ul style="opacity: 0.85; font-size: 0.92rem;" class="mb-4">
               <li>Long papers: up to 8 pages (excluding references)</li>
-              <li>Short / position papers: up to 4 pages (excluding references)</li>
-              <li>Format: <a href="https://kdd2026.kdd.org/research-track-call-for-papers/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">ACM double-column (KDD 2026 template)</a></li>
+              <li>Short papers: up to 4 pages (excluding references)</li>
+              <li>Position papers: up to 4 pages (excluding references)</li>
+              <li>Format: <a href="https://kdd2026.kdd.org/research-track-call-for-papers/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">ACM double-column (KDD 2026 template)</a>. Submissions must use <code>\documentclass[sigconf,anonymous,review]{acmart}</code>.</li>
             </ul>
             <a href="https://openreview.net/group?id=KDD.org/2026/Workshop/AgenticSE" target="_blank" rel="noopener" class="btn-submit mt-2">
               <i class="bi bi-box-arrow-up-right"></i> Submit Paper
