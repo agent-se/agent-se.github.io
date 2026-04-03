@@ -1,0 +1,15 @@
+node_modules/
+docs/.vitepress/dist
+docs/.vitepress/cache
+docs/.vitepress/.temp
+
+.claude
+.vscode
+.omc
+.DS_Store
+
+external/
+
+node_modules/
+docs/
+*.log
