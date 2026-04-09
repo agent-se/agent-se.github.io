@@ -8,7 +8,7 @@ const sections = [
   { id: 'home', label: 'Home' },
   { id: 'submission', label: 'Call for Papers' },
   { id: 'dates', label: 'Important Dates' },
-  { id: 'reviewer', label: 'Reviewer Nomination' },
+  { id: 'reviewer', label: 'Reviewer Self-Nomination' },
   { id: 'program', label: 'Program' },
   { id: 'organizers', label: 'Organizers' },
 ]
@@ -265,7 +265,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   </section>
 
   <!-- Reviewer Self-Nomination -->
-  <section id="reviewer" class="section">
+  <section id="reviewer" class="section section-alt">
     <div class="container">
       <h2 class="section-title">Reviewer Self-Nomination</h2>
       <hr class="section-divider">
@@ -283,7 +283,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   </section>
 
   <!-- Program Sketch -->
-  <section id="program" class="section section-alt">
+  <section id="program" class="section">
     <div class="container">
       <h2 class="section-title">Program Sketch</h2>
       <hr class="section-divider">
