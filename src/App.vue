@@ -275,7 +275,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
           and related areas. If you are interested in serving as a reviewer for the
           Agentic SE @ KDD'26 workshop, please fill out the self-nomination form below.
         </p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCNMUCDfMx9P9uxhqARNSdKuzQlpdOyeQu14NpWk2AaF2-Gg/viewform" target="_blank" rel="noopener" class="btn-submit mt-2">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCNMUCDfMx9P9uxhqARNSdKuzQlpdOyeQu14NpWk2AaF2-Gg/viewform" target="_blank" rel="noopener noreferrer" class="btn-submit mt-2">
           <i class="bi bi-pencil-square"></i> Nominate as Reviewer
         </a>
       </div>
