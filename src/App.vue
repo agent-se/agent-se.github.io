@@ -27,8 +27,7 @@ const topics = [
 ]
 
 const dates = [
-  { date: 'April 30th, 2026', event: 'Workshop Abstract Submission' },
-  { date: 'May 7th, 2026', event: 'Workshop Paper Submission' },
+  { date: 'May 10th, 2026', event: 'Workshop Paper Submission' },
   { date: 'June 4th, 2026', event: 'Workshop Paper Notification' },
   { date: 'August 10th, 2026', event: 'Workshop @ KDD 2026, Jeju, Korea' },
 ]
@@ -276,7 +275,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
           Agentic SE @ KDD'26 workshop, please fill out the self-nomination form below.
         </p>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCNMUCDfMx9P9uxhqARNSdKuzQlpdOyeQu14NpWk2AaF2-Gg/viewform" target="_blank" rel="noopener noreferrer" class="btn-submit mt-2">
-          <i class="bi bi-pencil-square"></i> Nominate as Reviewer
+          <i class="bi bi-pencil-square"></i> Self-Nominate as Reviewer
         </a>
       </div>
     </div>
