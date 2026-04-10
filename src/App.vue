@@ -229,6 +229,12 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
                 <strong>{{ t.title }}</strong>: {{ t.desc }}
               </li>
             </ul>
+            <h5 class="fw-bold mt-4 mb-2">Note on Data:</h5>
+            <p style="opacity: 0.85; font-size: 0.92rem;" class="mb-4">
+              While we encourage studies leveraging AIDev, submissions are not limited to this
+              dataset. We welcome research proposing original datasets, as well as data mining
+              and tooling studies.
+            </p>
             <h5 class="fw-bold mt-4 mb-2">Submission Guidelines:</h5>
             <ul style="opacity: 0.85; font-size: 0.92rem;" class="mb-4">
               <li>Long papers: up to 8 pages (excluding references)</li>
