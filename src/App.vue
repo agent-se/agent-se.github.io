@@ -8,6 +8,7 @@ const sections = [
   { id: 'home', label: 'Home' },
   { id: 'submission', label: 'Call for Papers' },
   { id: 'dates', label: 'Important Dates' },
+  { id: 'reviewer', label: 'Reviewer Self-Nomination' },
   { id: 'program', label: 'Program' },
   { id: 'organizers', label: 'Organizers' },
 ]
@@ -26,8 +27,7 @@ const topics = [
 ]
 
 const dates = [
-  { date: 'April 30th, 2026', event: 'Workshop Abstract Submission' },
-  { date: 'May 7th, 2026', event: 'Workshop Paper Submission' },
+  { date: 'May 10th, 2026', event: 'Workshop Paper Submission' },
   { date: 'June 4th, 2026', event: 'Workshop Paper Notification' },
   { date: 'August 10th, 2026', event: 'Workshop @ KDD 2026, Jeju, Korea' },
 ]
@@ -269,8 +269,26 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
     </div>
   </section>
 
+  <!-- Reviewer Self-Nomination -->
+  <section id="reviewer" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Reviewer Self-Nomination</h2>
+      <hr class="section-divider">
+      <div class="col-lg-10">
+        <p style="font-size: 1.02rem; line-height: 1.8;">
+          We are looking for qualified reviewers with expertise in AI agents, software engineering,
+          and related areas. If you are interested in serving as a reviewer for the
+          Agentic SE @ KDD'26 workshop, please fill out the self-nomination form below.
+        </p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCNMUCDfMx9P9uxhqARNSdKuzQlpdOyeQu14NpWk2AaF2-Gg/viewform" target="_blank" rel="noopener noreferrer" class="btn-submit mt-2">
+          <i class="bi bi-pencil-square"></i> Self-Nominate as Reviewer
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Program Sketch -->
-  <section id="program" class="section section-alt">
+  <section id="program" class="section">
     <div class="container">
       <h2 class="section-title">Program Sketch</h2>
       <hr class="section-divider">
