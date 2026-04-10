@@ -27,7 +27,8 @@ const topics = [
 ]
 
 const dates = [
-  { date: 'May 10th, 2026', event: 'Workshop Paper Submission' },
+  { date: 'April 30th, 2026', event: 'Workshop Abstract Submission' },
+  { date: 'May 7th, 2026', event: 'Workshop Paper Submission' },
   { date: 'June 4th, 2026', event: 'Workshop Paper Notification' },
   { date: 'August 10th, 2026', event: 'Workshop @ KDD 2026, Jeju, Korea' },
 ]
