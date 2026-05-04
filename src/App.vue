@@ -27,8 +27,8 @@ const topics = [
 ]
 
 const dates = [
-  { date: 'May 10th, 2026', event: 'Workshop Paper Submission' },
-  { date: 'June 4th, 2026', event: 'Workshop Paper Notification' },
+  { date: '<s>May 10th</s> June 1st, 2026', event: 'Workshop Paper Submission' },
+  { date: 'June 12th, 2026', event: 'Workshop Paper Notification' },
   { date: 'August 10th, 2026', event: 'Workshop @ KDD 2026, Jeju, Korea' },
 ]
 
@@ -258,7 +258,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
       <hr class="section-divider">
       <div class="col-lg-8">
         <div class="date-item" v-for="d in dates" :key="d.date">
-          <span class="date-badge">{{ d.date }}</span>
+          <span class="date-badge" v-html="d.date"></span>
           <span style="font-size: 1.02rem;">{{ d.event }}</span>
         </div>
         <p class="text-muted mt-3" style="font-size: 0.88rem;">
