@@ -28,7 +28,7 @@ const topics = [
 
 const dates = [
   { date: '<s>May 10th</s> June 1st, 2026', event: 'Workshop Paper Submission' },
-  { date: 'June 12th, 2026', event: 'Workshop Paper Notification' },
+  { date: 'June 10th, 2026', event: 'Workshop Paper Notification' },
   { date: 'August 10th, 2026', event: 'Workshop @ KDD 2026, Jeju, Korea' },
 ]
 
