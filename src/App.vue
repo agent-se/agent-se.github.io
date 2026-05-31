@@ -29,7 +29,7 @@ const topics = [
 const dates = [
   { date: '<s>May 10th</s> June 1st, 2026', event: 'Workshop Paper Submission' },
   { date: 'June 10th, 2026', event: 'Workshop Paper Notification' },
-  { date: 'August 10th, 2026', event: 'Workshop @ KDD 2026, Jeju, Korea' },
+  { date: 'August 9th, 2026', event: 'Workshop @ KDD 2026, Jeju, Korea' },
 ]
 
 const organizers = [
@@ -157,11 +157,11 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
           </h1>
           <p class="hero-subtitle">The Rise of AI Teammates</p>
           <p class="hero-meta mb-2">
-            <i class="bi bi-calendar-event"></i> August 10th, 2026
+            <i class="bi bi-calendar-event"></i> August 9th, 2026
             <span class="mx-2">|</span>
             <i class="bi bi-geo-alt"></i> Jeju, Korea
             <span class="mx-2">|</span>
-            <i class="bi bi-clock"></i> Half-Day
+            <i class="bi bi-clock"></i> Half-Day (Morning)
           </p>
           <p class="hero-meta" style="max-width: 800px; margin-top: 1.5rem; font-size: 1.05rem; line-height: 1.7;">
             Co-located with the <a href="https://kdd2026.kdd.org/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">ACM SIGKDD 2026</a>.
@@ -294,7 +294,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
     <div class="container">
       <h2 class="section-title">Program Sketch</h2>
       <hr class="section-divider">
-      <p class="mb-4 text-muted">Half-day workshop. Detailed schedule to be announced.</p>
+      <p class="mb-4 text-muted">Half-day (morning) workshop. Detailed schedule to be announced.</p>
       <!-- <div class="col-lg-10">
         <table class="table program-table">
           <thead>
@@ -353,7 +353,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
       </p>
       <p class="mb-1">
         <i class="bi bi-geo-alt me-1"></i> Jeju, Korea &middot;
-        <i class="bi bi-calendar3 ms-2 me-1"></i> August 10th, 2026
+        <i class="bi bi-calendar3 ms-2 me-1"></i> August 9th, 2026
       </p>
       <p class="mb-3 mt-3" style="font-size: 0.9rem;">
         <strong>Contact us:</strong> Please send questions and enquiries to <a href="mailto:hao.li@queensu.ca" style="color: inherit; text-decoration: underline;">hao.li@queensu.ca</a>
