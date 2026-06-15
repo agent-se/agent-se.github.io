@@ -10,7 +10,9 @@ const sections = [
   { id: 'dates', label: 'Important Dates' },
   { id: 'reviewer', label: 'Reviewer Self-Nomination' },
   { id: 'program', label: 'Program' },
+  { id: 'accepted-papers', label: 'Accepted Papers' },
   { id: 'organizers', label: 'Organizers' },
+  { id: 'committee', label: 'Program Committee' },
 ]
 
 const topics = [
@@ -91,6 +93,102 @@ const organizers = [
     role: '',
     bio: 'Mustafa Prize Laureate. Fellow of ACM, IEEE, and AAIA. Canada Research Chair in Software Engineering. Founder of the AI-Augmented SE, MSR, and AIware communities. Member of the Royal Society of Canada. The only person to receive both the ACM SIGSOFT Influential Educator Award (2019) and the IEEE TCSE Distinguished Educator Award (2020).',
   },
+]
+
+const acceptedOral = [
+  {
+    title: 'SVRepair: Structured Visual Reasoning for Automated Program Repair',
+    authors: 'Jincheng Wang, Liwei Luo, Xiaoxuan Tang, Jingxuan Xu, Sheng Zhou, Dajun Chen, Wei Jiang, Yong Li',
+  },
+  {
+    title: 'Self-EvolveRec: Self-Evolving Recommender Systems with LLM-based Directional Feedback',
+    authors: 'Sein Kim, Sangwu Park, HongSeok Kang, Wonjoong Kim, Jimin Seo, Yeonjun In, Kanghoon Yoon, Hyunsik Jeon, Chanyoung Park',
+  },
+  {
+    title: 'Rethinking Failure Attribution in Multi-Agent Systems: A Multi-Perspective Benchmark and Evaluation',
+    authors: 'Yeonjun In, Mehrab Tanjim, Jayakumar Subramanian, Sungchul Kim, Uttaran Bhattacharya, Wonjoong Kim, Sangwu Park, Somdeb Sarkhel, Chanyoung Park',
+  },
+]
+
+const acceptedPosters = [
+  {
+    title: 'RANGER: Repository-level Agent for Graph-Enhanced Retrieval',
+    authors: 'Pratik Shah, Rajat Ghosh, Aryan Singhal, Debojyoti Dutta',
+  },
+  {
+    title: 'Habituation at the Gate: Rising Approval and Declining Scrutiny in Human Review of AI Agent Code',
+    authors: 'Haoran Yu, Lifei Liu, Xiaochong Jiang, Yuwen Jia, Su Wang, Pin Qian, Yihang Chen',
+  },
+  {
+    title: 'Beyond Simpson’s Paradox: A Cascade of Confounders in AI Agent Pull-Request Co-Authorship',
+    authors: 'Haoran Yu, Xiaochong Jiang, Lifei Liu, Su Wang, Pin Qian, Yihang Chen',
+  },
+  {
+    title: 'Skill-as-API: Confidential Multi-Agent Coordination for Agentic Software Engineering',
+    authors: 'Ziwei Zhao, Yu Gu, Haojun Liang, Chen Zhang, Xizhi Ding',
+  },
+  {
+    title: 'LLM-as-Code: Agentic Programming for Agent Harness',
+    authors: 'Junjia Qi, Zichuan Fu, Jingtong Gao, Wenlin Zhang, Hanyu Yan, Xian Wu, Xiangyu Zhao',
+  },
+  {
+    title: 'When Does Restricting a Coding Agent to `execute_code` Help? A Regime × Agent-Design Ablation',
+    authors: 'Hong Yang, Qi Yu, Travis Desell',
+  },
+  {
+    title: 'Cross-Model LLM Code Review: Should you use Claude to review Codex or vice versa?',
+    authors: 'Zuodong Xiang, Yike Zhang, Hailu Xu, YueMing Zhang',
+  },
+  {
+    title: 'Position: Coding Benchmarks Are Misaligned with Agentic Software Engineering',
+    authors: 'Maria I. Gorinova, Macey Baker, Amy Heineike, Maksim Shaposhnikov, Rob Willoughby, Dru Knox',
+  },
+  {
+    title: 'Tracing the Messy Middle: A Runtime Transaction Schema for AI Coding Agents',
+    authors: 'Yuelin Hou, Haorui Li, Lu Chen, Zhen Chen',
+  },
+  {
+    title: 'Early Adoption of Agentic Coding Tools by GitHub Projects',
+    authors: 'Maliha Noushin Raida, Daqing Hou',
+  },
+  {
+    title: 'Aleena: Alignment Agent for Research Software Engineering',
+    authors: 'Kshitij Dani, Cordero Core, Landung Setiawan, Carlos Garcia Jurado Suarez, Anshul Tambay, Vani Mandava, Anant Mittal',
+  },
+  {
+    title: 'CAGE for Agentic Software Engineering: Field-Level Authorization at the AI Teammate Tool Boundary',
+    authors: 'José Luis Delgado',
+  },
+  {
+    title: 'Trust but Verify? Uncovering the Security Debt of Autonomous Coding Agents',
+    authors: 'A H M Nazmus Sakib, Dipayan Banik, Murtuza Jadliwala',
+  },
+  {
+    title: 'Task-Specialized Harness Refinement Across Financial Decision Tasks',
+    authors: 'Jinuk Lee',
+  },
+  {
+    title: 'Memory as a Service (MaaS): Purpose-Bound Memory Mediation for Cooperative Agents',
+    authors: 'Haichang Li',
+  },
+  {
+    title: 'Understanding Human Review Behavior in Agent-Authored Pull Requests: Evidence from AIDev',
+    authors: 'Chen Zhang, Junxi Wang, Shihong Huang',
+  },
+  {
+    title: 'Cost-Efficient Agentic Repository Setup for Automated SWE-bench Instance Construction',
+    authors: 'Jaehyeon Shin',
+  },
+]
+
+const pc = [
+  { name: 'Daming Li' }, { name: 'Suwen Ge' }, { name: 'Ninaad Rao' }, { name: 'Vineeth Kalluru' }, { name: 'Daqing Hou' },
+  { name: 'Haoran Yu' }, { name: 'Prajwal Sanjay Pisal' }, { name: 'Md. Asif Haider' }, { name: 'Siba Mishra' }, { name: 'Yihang Chen' },
+  { name: 'Karim Elish' }, { name: 'Sasha Aptlin' }, { name: 'Advitya Gemawat' }, { name: 'Rui Melo' }, { name: 'Quanzhi Fu' },
+  { name: 'Anisha Anil Jadhav' }, { name: 'Arjun Chakraborty' }, { name: 'Sandesh Basrur' }, { name: 'Siddharth Vohra' }, { name: 'Jianan Liu' },
+  { name: 'Bhoomi Kalpesh Patel' }, { name: 'Jiao Liu' }, { name: 'Yu Shi' }, { name: 'Gabriele De Vito' }, { name: 'Shraddha Barke' },
+  { name: 'Abhishek Dharmaratnakar' }, { name: 'Akshay Mallipeddi' }, { name: 'Kadir Alpaslan Demir' }, { name: 'Sayan Ghosh' },
+  { name: 'Zhimin Zhao', role: 'Web Chair' },
 ]
 
 
@@ -318,6 +416,31 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
     </div>
   </section>
 
+  <!-- Accepted Papers -->
+  <section id="accepted-papers" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Accepted Papers</h2>
+      <hr class="section-divider">
+      <div class="col-lg-10">
+        <h5 class="paper-group-title">Oral Presentations</h5>
+        <div class="accepted-papers-list mb-4">
+          <article class="accepted-paper-item" v-for="paper in acceptedOral" :key="paper.title">
+            <h3 class="accepted-paper-title">{{ paper.title }}</h3>
+            <p class="accepted-paper-authors">{{ paper.authors }}</p>
+          </article>
+        </div>
+
+        <h5 class="paper-group-title">Poster Presentations</h5>
+        <div class="accepted-papers-list">
+          <article class="accepted-paper-item" v-for="paper in acceptedPosters" :key="paper.title">
+            <h3 class="accepted-paper-title">{{ paper.title }}</h3>
+            <p class="accepted-paper-authors">{{ paper.authors }}</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Organizers -->
   <section id="organizers" class="section">
     <div class="container">
@@ -342,6 +465,21 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- Program Committee -->
+  <section id="committee" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Program Committee</h2>
+      <hr class="section-divider">
+      <div class="col-lg-10">
+        <ul class="pc-list">
+          <li v-for="p in pc" :key="p.name" class="pc-item">
+            <i class="bi bi-person-badge"></i>{{ p.name }}<span v-if="p.role" class="pc-role"> ({{ p.role }})</span>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 
