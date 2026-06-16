@@ -8,9 +8,9 @@ const sections = [
   { id: 'home', label: 'Home' },
   { id: 'submission', label: 'Call for Papers' },
   { id: 'dates', label: 'Important Dates' },
-  { id: 'reviewer', label: 'Reviewer Self-Nomination' },
-  { id: 'program', label: 'Program' },
-  { id: 'organizers', label: 'Organizers' },
+  { id: 'program', label: 'Schedule' },
+  { id: 'accepted-papers', label: 'Papers' },
+  { id: 'organizers', label: 'Committee' },
 ]
 
 const topics = [
@@ -27,8 +27,8 @@ const topics = [
 ]
 
 const dates = [
-  { date: '<s>May 10th</s> June 1st, 2026', event: 'Workshop Paper Submission' },
-  { date: 'June 10th, 2026', event: 'Workshop Paper Notification' },
+  { date: '<s>May 10th</s> <s>June 1st, 2026</s>', event: '<s>Workshop Paper Submission</s>' },
+  { date: '<s>June 10th, 2026</s>', event: '<s>Workshop Paper Notification</s>' },
   { date: 'August 9th, 2026', event: 'Workshop @ KDD 2026, Jeju, Korea' },
 ]
 
@@ -91,6 +91,125 @@ const organizers = [
     role: '',
     bio: 'Mustafa Prize Laureate. Fellow of ACM, IEEE, and AAIA. Canada Research Chair in Software Engineering. Founder of the AI-Augmented SE, MSR, and AIware communities. Member of the Royal Society of Canada. The only person to receive both the ACM SIGSOFT Influential Educator Award (2019) and the IEEE TCSE Distinguished Educator Award (2020).',
   },
+]
+
+const acceptedPapers = [
+  {
+    title: 'Aleena: Alignment Agent for Research Software Engineering',
+    authors: 'Kshitij Dani, Cordero Core, Landung Setiawan, Carlos Garcia Jurado Suarez, Anshul Tambay, Vani Mandava, Anant Mittal',
+  },
+  {
+    title: 'Beyond Simpson’s Paradox: A Cascade of Confounders in AI Agent Pull-Request Co-Authorship',
+    authors: 'Haoran Yu, Xiaochong Jiang, Lifei Liu, Su Wang, Pin Qian, Yihang Chen',
+  },
+  {
+    title: 'CAGE for Agentic Software Engineering: Field-Level Authorization at the AI Teammate Tool Boundary',
+    authors: 'José Luis Delgado',
+  },
+  {
+    title: 'Cost-Efficient Agentic Repository Setup for Automated SWE-bench Instance Construction',
+    authors: 'Jaehyeon Shin',
+  },
+  {
+    title: 'Cross-Model LLM Code Review: Should you use Claude to review Codex or vice versa?',
+    authors: 'Zuodong Xiang, Yike Zhang, Hailu Xu, YueMing Zhang',
+  },
+  {
+    title: 'Early Adoption of Agentic Coding Tools by GitHub Projects',
+    authors: 'Maliha Noushin Raida, Daqing Hou',
+  },
+  {
+    title: 'Habituation at the Gate: Rising Approval and Declining Scrutiny in Human Review of AI Agent Code',
+    authors: 'Haoran Yu, Lifei Liu, Xiaochong Jiang, Yuwen Jia, Su Wang, Pin Qian, Yihang Chen',
+  },
+  {
+    title: 'LLM-as-Code: Agentic Programming for Agent Harness',
+    authors: 'Junjia Qi, Zichuan Fu, Jingtong Gao, Wenlin Zhang, Hanyu Yan, Xian Wu, Xiangyu Zhao',
+  },
+  {
+    title: 'Memory as a Service (MaaS): Purpose-Bound Memory Mediation for Cooperative Agents',
+    authors: 'Haichang Li',
+  },
+  {
+    title: 'Position: Coding Benchmarks Are Misaligned with Agentic Software Engineering',
+    authors: 'Maria I. Gorinova, Macey Baker, Amy Heineike, Maksim Shaposhnikov, Rob Willoughby, Dru Knox',
+  },
+  {
+    title: 'RANGER: Repository-level Agent for Graph-Enhanced Retrieval',
+    authors: 'Pratik Shah, Rajat Ghosh, Aryan Singhal, Debojyoti Dutta',
+  },
+  {
+    title: 'Rethinking Failure Attribution in Multi-Agent Systems: A Multi-Perspective Benchmark and Evaluation',
+    authors: 'Yeonjun In, Mehrab Tanjim, Jayakumar Subramanian, Sungchul Kim, Uttaran Bhattacharya, Wonjoong Kim, Sangwu Park, Somdeb Sarkhel, Chanyoung Park',
+    type: 'Oral',
+  },
+  {
+    title: 'Self-EvolveRec: Self-Evolving Recommender Systems with LLM-based Directional Feedback',
+    authors: 'Sein Kim, Sangwu Park, HongSeok Kang, Wonjoong Kim, Jimin Seo, Yeonjun In, Kanghoon Yoon, Hyunsik Jeon, Chanyoung Park',
+    type: 'Oral',
+  },
+  {
+    title: 'Skill-as-API: Confidential Multi-Agent Coordination for Agentic Software Engineering',
+    authors: 'Ziwei Zhao, Yu Gu, Haojun Liang, Chen Zhang, Xizhi Ding',
+  },
+  {
+    title: 'SVRepair: Structured Visual Reasoning for Automated Program Repair',
+    authors: 'Jincheng Wang, Liwei Luo, Xiaoxuan Tang, Jingxuan Xu, Sheng Zhou, Dajun Chen, Wei Jiang, Yong Li',
+    type: 'Oral',
+  },
+  {
+    title: 'When Does Restricting a Coding Agent to `execute_code` Help? A Regime × Agent-Design Ablation',
+    authors: 'Hong Yang, Qi Yu, Travis Desell',
+  },
+  {
+    title: 'Tracing the Messy Middle: A Runtime Transaction Schema for AI Coding Agents',
+    authors: 'Yuelin Hou, Haorui Li, Lu Chen, Zhen Chen',
+  },
+  {
+    title: 'Trust but Verify? Uncovering the Security Debt of Autonomous Coding Agents',
+    authors: 'A H M Nazmus Sakib, Dipayan Banik, Murtuza Jadliwala',
+  },
+  {
+    title: 'Understanding Human Review Behavior in Agent-Authored Pull Requests: Evidence from AIDev',
+    authors: 'Chen Zhang, Junxi Wang, Shihong Huang',
+  },
+  {
+    title: 'Task-Specialized Harness Refinement Across Financial Decision Tasks',
+    authors: 'Jinuk Lee',
+  },
+].sort((a, b) => a.title.localeCompare(b.title))
+
+const pc = [
+  { name: 'Sasha Aptlin', affiliation: 'ReachRx' },
+  { name: 'Shraddha Barke', affiliation: 'Microsoft' },
+  { name: 'Sandesh Basrur', affiliation: 'Judson College' },
+  { name: 'Arjun Chakraborty', affiliation: 'Microsoft' },
+  { name: 'Yihang Chen', affiliation: 'Georgia Institute of Technology' },
+  { name: 'Gabriele De Vito', affiliation: 'University of Salerno' },
+  { name: 'Kadir Alpaslan Demir', affiliation: 'Texas A&M University' },
+  { name: 'Abhishek Dharmaratnakar', affiliation: 'Google' },
+  { name: 'Karim Elish', affiliation: 'Florida Polytechnic University' },
+  { name: 'Quanzhi Fu', affiliation: 'Virginia Tech' },
+  { name: 'Suwen Ge', affiliation: 'Facebook' },
+  { name: 'Advitya Gemawat', affiliation: 'Microsoft' },
+  { name: 'Sayan Ghosh', affiliation: 'Amazon' },
+  { name: 'Md. Asif Haider', affiliation: 'University of California, Irvine' },
+  { name: 'Daqing Hou', affiliation: 'Clarkson University' },
+  { name: 'Anisha Anil Jadhav', affiliation: 'Independent' },
+  { name: 'Vineeth Kalluru', affiliation: 'NVIDIA' },
+  { name: 'Daming Li', affiliation: 'LinkedIn' },
+  { name: 'Jianan Liu', affiliation: 'Meta Platforms, Inc' },
+  { name: 'Jiao Liu', affiliation: 'Morgan Stanley' },
+  { name: 'Akshay Mallipeddi', affiliation: 'Splunk Inc' },
+  { name: 'Rui Melo', affiliation: 'Carnegie Mellon University' },
+  { name: 'Siba Mishra', affiliation: 'C. V. Raman Global University' },
+  { name: 'Bhoomi Kalpesh Patel', affiliation: 'Facebook' },
+  { name: 'Prajwal Sanjay Pisal', affiliation: 'Independent' },
+  { name: 'Ninaad Rao', affiliation: 'Cisco' },
+  { name: 'Yu Shi', affiliation: 'Queen\'s University' },
+  { name: 'Siddharth Vohra', affiliation: 'Carnegie Mellon University' },
+  { name: 'Haoran Yu', affiliation: 'University of Florida' },
+  { name: 'Zhimin Zhao', affiliation: "Queen's University", role: 'Web Chair' }
 ]
 
 
@@ -261,7 +380,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
       <div class="col-lg-8">
         <div class="date-item" v-for="d in dates" :key="d.date">
           <span class="date-badge" v-html="d.date"></span>
-          <span style="font-size: 1.02rem;">{{ d.event }}</span>
+          <span style="font-size: 1.02rem;" v-html="d.event"></span>
         </div>
         <p class="text-muted mt-3" style="font-size: 0.88rem;">
           <i class="bi bi-info-circle me-1"></i>
@@ -292,7 +411,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   <!-- Program Sketch -->
   <section id="program" class="section">
     <div class="container">
-      <h2 class="section-title">Program Sketch</h2>
+      <h2 class="section-title">Program Schedule</h2>
       <hr class="section-divider">
       <p class="mb-4 text-muted">Half-day (morning) workshop. Detailed schedule to be announced.</p>
       <!-- <div class="col-lg-10">
@@ -315,6 +434,25 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
           </tbody>
         </table>
       </div> -->
+    </div>
+  </section>
+
+  <!-- Accepted Papers -->
+  <section id="accepted-papers" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Accepted Papers</h2>
+      <hr class="section-divider">
+      <div class="col-lg-10">
+        <div class="accepted-papers-list">
+          <article class="accepted-paper-item" v-for="paper in acceptedPapers" :key="paper.title">
+            <div class="accepted-paper-heading">
+              <h3 class="accepted-paper-title">{{ paper.title }}</h3>
+              <span v-if="paper.type === 'Oral'" class="accepted-paper-tag">Oral</span>
+            </div>
+            <p class="accepted-paper-authors">{{ paper.authors }}</p>
+          </article>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -342,6 +480,24 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- Program Committee -->
+  <section id="committee" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Program Committee</h2>
+      <hr class="section-divider">
+      <div class="col-lg-10">
+        <ul class="pc-list">
+          <li v-for="p in pc" :key="p.name" class="pc-item">
+            <div class="pc-name">
+              <i class="bi bi-person-badge"></i>{{ p.name }}<span v-if="p.role" class="pc-role"> ({{ p.role }})</span>
+            </div>
+            <div v-if="p.affiliation" class="pc-affiliation">{{ p.affiliation }}</div>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 
