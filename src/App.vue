@@ -413,8 +413,8 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
     <div class="container">
       <h2 class="section-title">Program Schedule</h2>
       <hr class="section-divider">
-      <p class="mb-4 text-muted">Half-day (morning) workshop. Detailed schedule to be announced.</p>
-      <!-- <div class="col-lg-10">
+      <p class="mb-4 text-muted">Half-day (morning) workshop, August 9th, 2026.</p>
+      <div class="col-lg-10">
         <table class="table program-table">
           <thead>
             <tr>
@@ -423,17 +423,14 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
             </tr>
           </thead>
           <tbody>
-            <tr><td>TBD</td><td>Opening Remarks</td></tr>
-            <tr><td>TBD</td><td>Keynote Talk 1</td></tr>
-            <tr><td>TBD</td><td>Paper Presentations — Session 1</td></tr>
-            <tr><td>TBD</td><td>Coffee Break</td></tr>
-            <tr><td>TBD</td><td>Keynote Talk 2</td></tr>
-            <tr><td>TBD</td><td>Paper Presentations — Session 2</td></tr>
-            <tr><td>TBD</td><td>Panel Discussion: The Future of AI Teammates</td></tr>
-            <tr><td>TBD</td><td>Closing Remarks</td></tr>
+            <tr><td>8:00 – 8:10</td><td>Opening Remarks</td></tr>
+            <tr><td>8:10 – 9:00</td><td>Keynote Talk 1</td></tr>
+            <tr><td>9:00 – 10:10</td><td>Poster Session + Coffee Break (coffee served 9:30 – 10:00)</td></tr>
+            <tr><td>10:10 – 11:00</td><td>Keynote Talk 2</td></tr>
+            <tr><td>11:00 – 12:00</td><td>Paper Oral Presentations</td></tr>
           </tbody>
         </table>
-      </div> -->
+      </div>
     </div>
   </section>
 
