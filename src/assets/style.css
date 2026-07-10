@@ -304,6 +304,35 @@ body {
   margin-top: 0.4rem;
 }
 
+/* Keynote speakers */
+.keynote-speaker-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+}
+
+.keynote-avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #e8edf2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Schedule links */
+.schedule-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--accent-dark);
+}
+
+.schedule-link:hover {
+  color: var(--accent-dark);
+}
+
 /* Program table */
 .program-table {
   border-radius: 12px;

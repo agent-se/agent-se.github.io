@@ -6,10 +6,11 @@ const navCollapsed = ref(true)
 
 const sections = [
   { id: 'home', label: 'Home' },
+  { id: 'program', label: 'Schedule' },
+  { id: 'keynote', label: 'Speakers' },
+  { id: 'accepted-papers', label: 'Papers' },
   { id: 'submission', label: 'Call for Papers' },
   { id: 'dates', label: 'Important Dates' },
-  { id: 'program', label: 'Schedule' },
-  { id: 'accepted-papers', label: 'Papers' },
   { id: 'organizers', label: 'Committee' },
 ]
 
@@ -179,6 +180,20 @@ const acceptedPapers = [
   },
 ].sort((a, b) => a.title.localeCompare(b.title))
 
+const keynoteSpeakers = [
+  {
+    id: 'speaker-behrooz',
+    name: 'Behrooz Omidvar-Tehrani',
+    affiliation: 'Science Lead @ AWS Agentic AI',
+    website: 'https://www.linkedin.com/in/behroozomidvar',
+    photo: '/images/behrooz.png',
+    time: '10:10 – 11:00',
+    title: 'Teaching Coding Agents to Remember What Matters',
+    bio: 'Behrooz Omidvar-Tehrani is a Senior Applied Scientist and Science Lead at AWS Agentic AI, where he drives research on agentic code transformation and coding agents. Previously, he was a Research Scientist at LIG (Grenoble Informatics Laboratory) and NAVER LABS Europe, and a Postdoctoral Researcher at The Ohio State University. He holds a PhD in Mathematics and Computer Science from Université Grenoble Alpes.',
+    abstract: 'Large language models are stateless, retaining nothing between invocations. Yet developers increasingly expect AI coding agents to behave like teammates who remember project conventions, adapt to personal style, recall past failures, and coordinate across a team. The challenge is not just remembering, but also learning what matters and forgetting what does not. This talk examines what a principled memory system for coding agents entails. We discuss how distinct forms of remembering, from recalling past interactions to internalizing codebase structure, contribute to the developer experience in fundamentally different ways. We then expand the scope beyond the individual, exploring how memory extends to the team level, where shared conventions and collective knowledge must be captured and respected. Drawing on concrete examples, we identify where current designs succeed and where critical gaps persist, particularly around lifecycle governance, retrieval and ranking, long-term adaptation, and multi-player coordination.',
+  },
+]
+
 const pc = [
   { name: 'Sasha Aptlin', affiliation: 'ReachRx' },
   { name: 'Shraddha Barke', affiliation: 'Microsoft' },
@@ -329,8 +344,84 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
     </div>
   </section>
 
+  <!-- Program Sketch -->
+  <section id="program" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Program Schedule</h2>
+      <hr class="section-divider">
+      <p class="mb-4 text-muted">Half-day (morning) workshop, August 9th, 2026.</p>
+      <div class="col-lg-10">
+        <table class="table program-table">
+          <thead>
+            <tr>
+              <th style="width: 160px;">Time</th>
+              <th>Event</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>8:00 – 8:10</td><td>Opening Remarks</td></tr>
+            <tr><td>8:10 – 9:00</td><td>Keynote Talk 1</td></tr>
+            <tr><td>9:00 – 10:10</td><td><a href="#" @click.prevent="scrollTo('accepted-papers')" class="schedule-link">Poster Session</a> + Coffee Break (coffee served 9:30 – 10:00)</td></tr>
+            <tr><td>10:10 – 11:00</td><td>Keynote Talk 2: <em><a href="#" @click.prevent="scrollTo('keynote')" class="schedule-link">{{ keynoteSpeakers[0].title }}</a></em> — {{ keynoteSpeakers[0].name }}</td></tr>
+            <tr><td>11:00 – 12:00</td><td><a href="#" @click.prevent="scrollTo('accepted-papers')" class="schedule-link">Paper Oral Presentations</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Keynote Speakers -->
+  <section id="keynote" class="section">
+    <div class="container">
+      <h2 class="section-title">Keynote Speakers</h2>
+      <hr class="section-divider">
+      <div v-for="speaker in keynoteSpeakers" :key="speaker.id" class="keynote-speaker-card mb-5">
+        <div class="row align-items-start">
+          <div class="col-md-3 text-center mb-3 mb-md-0">
+            <a :href="speaker.website" target="_blank" rel="noopener noreferrer">
+              <img class="keynote-avatar" :src="speaker.photo" :alt="speaker.name">
+            </a>
+            <h5 class="mt-3 mb-1">
+              <a :href="speaker.website" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">
+                {{ speaker.name }}
+              </a>
+            </h5>
+            <p class="affiliation mb-0">{{ speaker.affiliation }}</p>
+          </div>
+          <div class="col-md-9">
+            <h4 class="fw-bold mb-2" style="color: var(--accent-dark);">{{ speaker.title }}</h4>
+            <p class="text-muted mb-2" style="font-size: 0.9rem;">
+              <i class="bi bi-clock me-1"></i>{{ speaker.time }}
+            </p>
+            <p style="font-size: 0.95rem; line-height: 1.8; opacity: 0.85;" class="mb-3">{{ speaker.abstract }}</p>
+            <p style="font-size: 0.9rem; line-height: 1.7; opacity: 0.7;"><strong>Bio:</strong> {{ speaker.bio }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accepted Papers -->
+  <section id="accepted-papers" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Accepted Papers</h2>
+      <hr class="section-divider">
+      <div class="col-lg-10">
+        <div class="accepted-papers-list">
+          <article class="accepted-paper-item" v-for="paper in acceptedPapers" :key="paper.title">
+            <div class="accepted-paper-heading">
+              <h3 class="accepted-paper-title">{{ paper.title }}</h3>
+              <span v-if="paper.type === 'Oral'" class="accepted-paper-tag">Oral</span>
+            </div>
+            <p class="accepted-paper-authors">{{ paper.authors }}</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Submission / CTA -->
-  <section id="submission" class="section section-alt">
+  <section id="submission" class="section">
     <div class="container">
       <h2 class="section-title">Call for Papers</h2>
       <hr class="section-divider">
@@ -373,7 +464,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   </section>
 
   <!-- Important Dates -->
-  <section id="dates" class="section">
+  <section id="dates" class="section section-alt">
     <div class="container">
       <h2 class="section-title">Important Dates</h2>
       <hr class="section-divider">
@@ -391,7 +482,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   </section>
 
   <!-- Reviewer Self-Nomination -->
-  <section id="reviewer" class="section section-alt">
+  <section id="reviewer" class="section">
     <div class="container">
       <h2 class="section-title">Reviewer Self-Nomination</h2>
       <hr class="section-divider">
@@ -408,53 +499,8 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
     </div>
   </section>
 
-  <!-- Program Sketch -->
-  <section id="program" class="section">
-    <div class="container">
-      <h2 class="section-title">Program Schedule</h2>
-      <hr class="section-divider">
-      <p class="mb-4 text-muted">Half-day (morning) workshop, August 9th, 2026.</p>
-      <div class="col-lg-10">
-        <table class="table program-table">
-          <thead>
-            <tr>
-              <th style="width: 160px;">Time</th>
-              <th>Event</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>8:00 – 8:10</td><td>Opening Remarks</td></tr>
-            <tr><td>8:10 – 9:00</td><td>Keynote Talk 1</td></tr>
-            <tr><td>9:00 – 10:10</td><td>Poster Session + Coffee Break (coffee served 9:30 – 10:00)</td></tr>
-            <tr><td>10:10 – 11:00</td><td>Keynote Talk 2</td></tr>
-            <tr><td>11:00 – 12:00</td><td>Paper Oral Presentations</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- Accepted Papers -->
-  <section id="accepted-papers" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">Accepted Papers</h2>
-      <hr class="section-divider">
-      <div class="col-lg-10">
-        <div class="accepted-papers-list">
-          <article class="accepted-paper-item" v-for="paper in acceptedPapers" :key="paper.title">
-            <div class="accepted-paper-heading">
-              <h3 class="accepted-paper-title">{{ paper.title }}</h3>
-              <span v-if="paper.type === 'Oral'" class="accepted-paper-tag">Oral</span>
-            </div>
-            <p class="accepted-paper-authors">{{ paper.authors }}</p>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Organizers -->
-  <section id="organizers" class="section">
+  <section id="organizers" class="section section-alt">
     <div class="container">
       <h2 class="section-title">Organizing Committee</h2>
       <hr class="section-divider">
@@ -481,7 +527,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   </section>
 
   <!-- Program Committee -->
-  <section id="committee" class="section section-alt">
+  <section id="committee" class="section">
     <div class="container">
       <h2 class="section-title">Program Committee</h2>
       <hr class="section-divider">
