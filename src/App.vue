@@ -96,89 +96,111 @@ const organizers = [
 
 const acceptedPapers = [
   {
-    title: 'Aleena: Alignment Agent for Research Software Engineering',
+    title: 'Aleena: Alignment Agent for Research Software Engineering Collaborations',
     authors: 'Kshitij Dani, Cordero Core, Landung Setiawan, Carlos Garcia Jurado Suarez, Anshul Tambay, Vani Mandava, Anant Mittal',
+    id: 'W806qV5FMl',
   },
   {
     title: 'Beyond Simpson’s Paradox: A Cascade of Confounders in AI Agent Pull-Request Co-Authorship',
     authors: 'Haoran Yu, Xiaochong Jiang, Lifei Liu, Su Wang, Pin Qian, Yihang Chen',
+    id: 'Vry8s4qhsG',
   },
   {
     title: 'CAGE for Agentic Software Engineering: Field-Level Authorization at the AI Teammate Tool Boundary',
     authors: 'José Luis Delgado',
+    id: 'qMWWIpAu1r',
   },
   {
     title: 'Cost-Efficient Agentic Repository Setup for Automated SWE-bench Instance Construction',
     authors: 'Jaehyeon Shin',
+    id: 'BuOCdojk2w',
   },
   {
     title: 'Cross-Model LLM Code Review: Should you use Claude to review Codex or vice versa?',
     authors: 'Zuodong Xiang, Yike Zhang, Hailu Xu, YueMing Zhang',
+    id: 'Fh32FqhIfG',
   },
   {
     title: 'Early Adoption of Agentic Coding Tools by GitHub Projects',
     authors: 'Maliha Noushin Raida, Daqing Hou',
+    id: 'FIZmOuvISe',
   },
   {
     title: 'Habituation at the Gate: Rising Approval and Declining Scrutiny in Human Review of AI Agent Code',
     authors: 'Haoran Yu, Lifei Liu, Xiaochong Jiang, Yuwen Jia, Su Wang, Pin Qian, Yihang Chen',
+    id: '2ZvHEHw4IZ',
   },
   {
     title: 'LLM-as-Code: Agentic Programming for Agent Harness',
     authors: 'Junjia Qi, Zichuan Fu, Jingtong Gao, Wenlin Zhang, Hanyu Yan, Xian Wu, Xiangyu Zhao',
+    id: 'AXRMBC8j7c',
   },
   {
     title: 'Memory as a Service (MaaS): Purpose-Bound Memory Mediation for Cooperative Agents',
     authors: 'Haichang Li',
+    id: 'hWEO8cKDvS',
   },
   {
     title: 'Position: Coding Benchmarks Are Misaligned with Agentic Software Engineering',
     authors: 'Maria I. Gorinova, Macey Baker, Amy Heineike, Maksim Shaposhnikov, Rob Willoughby, Dru Knox',
+    id: 't32Hgnk7ou',
   },
   {
     title: 'RANGER: Repository-level Agent for Graph-Enhanced Retrieval',
     authors: 'Pratik Shah, Rajat Ghosh, Aryan Singhal, Debojyoti Dutta',
+    id: 'WBCZRyP0HB',
   },
   {
     title: 'Rethinking Failure Attribution in Multi-Agent Systems: A Multi-Perspective Benchmark and Evaluation',
     authors: 'Yeonjun In, Mehrab Tanjim, Jayakumar Subramanian, Sungchul Kim, Uttaran Bhattacharya, Wonjoong Kim, Sangwu Park, Somdeb Sarkhel, Chanyoung Park',
     type: 'Oral',
+    id: 'oBaY1EFz6z',
   },
   {
     title: 'Self-EvolveRec: Self-Evolving Recommender Systems with LLM-based Directional Feedback',
     authors: 'Sein Kim, Sangwu Park, HongSeok Kang, Wonjoong Kim, Jimin Seo, Yeonjun In, Kanghoon Yoon, Hyunsik Jeon, Chanyoung Park',
     type: 'Oral',
+    id: 'fBLhmZ1aNN',
   },
   {
     title: 'Skill-as-API: Confidential Multi-Agent Coordination for Agentic Software Engineering',
     authors: 'Ziwei Zhao, Yu Gu, Haojun Liang, Chen Zhang, Xizhi Ding',
+    id: 'mBwHulqlqO',
   },
   {
     title: 'SVRepair: Structured Visual Reasoning for Automated Program Repair',
     authors: 'Jincheng Wang, Liwei Luo, Xiaoxuan Tang, Jingxuan Xu, Sheng Zhou, Dajun Chen, Wei Jiang, Yong Li',
     type: 'Oral',
+    id: '7vFgF9DV1G',
   },
   {
     title: 'When Does Restricting a Coding Agent to `execute_code` Help? A Regime × Agent-Design Ablation',
     authors: 'Hong Yang, Qi Yu, Travis Desell',
+    id: 'kbkm1Y4BtY',
   },
   {
     title: 'Tracing the Messy Middle: A Runtime Transaction Schema for AI Coding Agents',
     authors: 'Yuelin Hou, Haorui Li, Lu Chen, Zhen Chen',
+    id: 'GwP03jl6Ux',
   },
   {
     title: 'Trust but Verify? Uncovering the Security Debt of Autonomous Coding Agents',
     authors: 'A H M Nazmus Sakib, Dipayan Banik, Murtuza Jadliwala',
+    id: 'K9Wv2pVlIZ',
   },
   {
     title: 'Understanding Human Review Behavior in Agent-Authored Pull Requests: Evidence from AIDev',
     authors: 'Chen Zhang, Junxi Wang, Shihong Huang',
+    id: '57OKmT7Wlz',
   },
   {
     title: 'Task-Specialized Harness Refinement Across Financial Decision Tasks',
     authors: 'Jinuk Lee',
+    id: '9LHVuRrbYx',
   },
 ].sort((a, b) => a.title.localeCompare(b.title))
+
+const oralPapers = acceptedPapers.filter((paper) => paper.type === 'Oral')
 
 const keynoteSpeakers = [
   {
@@ -293,7 +315,9 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
           <p class="hero-meta mb-2">
             <i class="bi bi-calendar-event"></i> August 9th, 2026
             <span class="mx-2">|</span>
-            <i class="bi bi-geo-alt"></i> Jeju, Korea
+            <i class="bi bi-geo-alt"></i> Jeju ICC, Korea
+            <span class="mx-2">|</span>
+            <i class="bi bi-building"></i> Room: Samda B
             <span class="mx-2">|</span>
             <i class="bi bi-clock"></i> Half-Day (Morning)
           </p>
@@ -349,7 +373,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
     <div class="container">
       <h2 class="section-title">Program Schedule</h2>
       <hr class="section-divider">
-      <p class="mb-4 text-muted">Half-day (morning) workshop, August 9th, 2026.</p>
+      <p class="mb-4 text-muted">Half-day (morning) workshop, August 9th, 2026, in Room Samda B at the Jeju ICC.</p>
       <div class="col-lg-10">
         <table class="table program-table">
           <thead>
@@ -360,10 +384,21 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
           </thead>
           <tbody>
             <tr><td>8:00 – 8:10</td><td>Opening Remarks</td></tr>
-            <tr><td>8:10 – 9:00</td><td>Keynote Talk 1</td></tr>
-            <tr><td>9:00 – 10:10</td><td><a href="#" @click.prevent="scrollTo('accepted-papers')" class="schedule-link">Poster Session</a> + Coffee Break (coffee served 9:30 – 10:00)</td></tr>
-            <tr><td>10:10 – 11:00</td><td>Keynote Talk 2: <em><a href="#" @click.prevent="scrollTo('keynote')" class="schedule-link">{{ keynoteSpeakers[0].title }}</a></em> — {{ keynoteSpeakers[0].name }}</td></tr>
-            <tr><td>11:00 – 12:00</td><td><a href="#" @click.prevent="scrollTo('accepted-papers')" class="schedule-link">Paper Oral Presentations</a></td></tr>
+            <tr>
+              <td>8:10 – 9:00</td>
+              <td>
+                Paper Oral Presentations
+                <div class="schedule-oral-list">
+                  <div v-for="paper in oralPapers" :key="paper.id" class="schedule-oral-item">
+                    <a class="schedule-oral-title" :href="`https://openreview.net/pdf?id=${paper.id}`" target="_blank" rel="noopener noreferrer">{{ paper.title }}</a>
+                    <span class="schedule-oral-authors">{{ paper.authors }}</span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr><td>9:00 – 10:10</td><td><a href="#" @click.prevent="scrollTo('accepted-papers')" class="schedule-link">Poster Session</a> (ICC 1 Foyer, between Halla and Samda Hall) + Coffee Break (coffee served 9:30 – 10:00)</td></tr>
+            <tr><td>10:10 – 11:00</td><td>Keynote Talk: <em><a href="#" @click.prevent="scrollTo('keynote')" class="schedule-link">{{ keynoteSpeakers[0].title }}</a></em> — {{ keynoteSpeakers[0].name }}</td></tr>
+            <tr><td>11:00 – 12:00</td><td>Discussion Session</td></tr>
           </tbody>
         </table>
       </div>
@@ -373,7 +408,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   <!-- Keynote Speakers -->
   <section id="keynote" class="section">
     <div class="container">
-      <h2 class="section-title">Keynote Speakers</h2>
+      <h2 class="section-title">Keynote Speaker</h2>
       <hr class="section-divider">
       <div v-for="speaker in keynoteSpeakers" :key="speaker.id" class="keynote-speaker-card mb-5">
         <div class="row align-items-start">
@@ -407,10 +442,14 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
       <h2 class="section-title">Accepted Papers</h2>
       <hr class="section-divider">
       <div class="col-lg-10">
+        <p class="mb-4 text-muted">Posters will be displayed in the ICC 1 Foyer, between Halla and Samda Hall.</p>
         <div class="accepted-papers-list">
           <article class="accepted-paper-item" v-for="paper in acceptedPapers" :key="paper.title">
             <div class="accepted-paper-heading">
-              <h3 class="accepted-paper-title">{{ paper.title }}</h3>
+              <h3 class="accepted-paper-title">
+                <a v-if="paper.id" class="accepted-paper-title-link" :href="`https://openreview.net/pdf?id=${paper.id}`" target="_blank" rel="noopener noreferrer">{{ paper.title }}</a>
+                <template v-else>{{ paper.title }}</template>
+              </h3>
               <span v-if="paper.type === 'Oral'" class="accepted-paper-tag">Oral</span>
             </div>
             <p class="accepted-paper-authors">{{ paper.authors }}</p>

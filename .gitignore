@@ -13,3 +13,6 @@ external/
 node_modules/
 docs/
 *.log
+
+# local research notes (invited-speaker search) — not for the public site
+speaker-search/
