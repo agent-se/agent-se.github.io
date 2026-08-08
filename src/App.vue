@@ -94,111 +94,247 @@ const organizers = [
   },
 ]
 
-const acceptedPapers = [
+// Author affiliations verified against the camera-ready OpenReview PDFs (pdfs/).
+const acceptedPapersData = [
   {
     title: 'Aleena: Alignment Agent for Research Software Engineering Collaborations',
-    authors: 'Kshitij Dani, Cordero Core, Landung Setiawan, Carlos Garcia Jurado Suarez, Anshul Tambay, Vani Mandava, Anant Mittal',
+    authors: [
+      { name: 'Kshitij Dani', orgs: ['University of Washington'] },
+      { name: 'Cordero Core', orgs: ['University of Washington'] },
+      { name: 'Landung Setiawan', orgs: ['University of Washington'] },
+      { name: 'Carlos Garcia Jurado Suarez', orgs: ['University of Washington'] },
+      { name: 'Anshul Tambay', orgs: ['University of Washington'] },
+      { name: 'Vani Mandava', orgs: ['University of Washington'] },
+      { name: 'Anant Mittal', orgs: ['University of Washington'] },
+    ],
     id: 'W806qV5FMl',
   },
   {
     title: 'Beyond Simpson’s Paradox: A Cascade of Confounders in AI Agent Pull-Request Co-Authorship',
-    authors: 'Haoran Yu, Xiaochong Jiang, Lifei Liu, Su Wang, Pin Qian, Yihang Chen',
+    authors: [
+      { name: 'Haoran Yu', orgs: ['Independent Researcher'] },
+      { name: 'Xiaochong Jiang', orgs: ['Independent Researcher'] },
+      { name: 'Lifei Liu', orgs: ['Independent Researcher'] },
+      { name: 'Su Wang', orgs: ['Carnegie Mellon University'] },
+      { name: 'Pin Qian', orgs: ['Carnegie Mellon University'] },
+      { name: 'Yihang Chen', orgs: ['Georgia Institute of Technology'] },
+    ],
     id: 'Vry8s4qhsG',
   },
   {
     title: 'CAGE for Agentic Software Engineering: Field-Level Authorization at the AI Teammate Tool Boundary',
-    authors: 'José Luis Delgado',
+    authors: [
+      { name: 'José Luis Delgado', orgs: ['Universitat Oberta de Catalunya'] },
+    ],
     id: 'qMWWIpAu1r',
   },
   {
     title: 'Cost-Efficient Agentic Repository Setup for Automated SWE-bench Instance Construction',
-    authors: 'Jaehyeon Shin',
+    authors: [
+      { name: 'Jaehyeon Shin', orgs: ['Kyung Hee University'] },
+    ],
     id: 'BuOCdojk2w',
   },
   {
     title: 'Cross-Model LLM Code Review: Should you use Claude to review Codex or vice versa?',
-    authors: 'Zuodong Xiang, Yike Zhang, Hailu Xu, YueMing Zhang',
+    authors: [
+      { name: 'Zuodong Xiang', orgs: ['University of California, Davis'] },
+      { name: 'Yike Zhang', orgs: ['Johns Hopkins University'] },
+      { name: 'Hailu Xu', orgs: ['California State University, Long Beach'] },
+      { name: 'YueMing Zhang', orgs: ['California State University, Long Beach'] },
+    ],
     id: 'Fh32FqhIfG',
   },
   {
     title: 'Early Adoption of Agentic Coding Tools by GitHub Projects',
-    authors: 'Maliha Noushin Raida, Daqing Hou',
+    authors: [
+      { name: 'Maliha Noushin Raida', orgs: ['Rochester Institute of Technology'] },
+      { name: 'Daqing Hou', orgs: ['Rochester Institute of Technology'] },
+    ],
     id: 'FIZmOuvISe',
   },
   {
     title: 'Habituation at the Gate: Rising Approval and Declining Scrutiny in Human Review of AI Agent Code',
-    authors: 'Haoran Yu, Lifei Liu, Xiaochong Jiang, Yuwen Jia, Su Wang, Pin Qian, Yihang Chen',
+    authors: [
+      { name: 'Haoran Yu', orgs: ['Independent Researcher'] },
+      { name: 'Lifei Liu', orgs: ['Independent Researcher'] },
+      { name: 'Xiaochong Jiang', orgs: ['Independent Researcher'] },
+      { name: 'Yuwen Jia', orgs: ['Independent Researcher'] },
+      { name: 'Su Wang', orgs: ['Carnegie Mellon University'] },
+      { name: 'Pin Qian', orgs: ['Carnegie Mellon University'] },
+      { name: 'Yihang Chen', orgs: ['Georgia Institute of Technology'] },
+    ],
     id: '2ZvHEHw4IZ',
   },
   {
     title: 'LLM-as-Code: Agentic Programming for Agent Harness',
-    authors: 'Junjia Qi, Zichuan Fu, Jingtong Gao, Wenlin Zhang, Hanyu Yan, Xian Wu, Xiangyu Zhao',
+    authors: [
+      { name: 'Junjia Qi', orgs: ['City University of Hong Kong'] },
+      { name: 'Zichuan Fu', orgs: ['City University of Hong Kong'] },
+      { name: 'Jingtong Gao', orgs: ['City University of Hong Kong'] },
+      { name: 'Wenlin Zhang', orgs: ['City University of Hong Kong'] },
+      { name: 'Hanyu Yan', orgs: ['City University of Hong Kong'] },
+      { name: 'Xian Wu', orgs: ['Tencent'] },
+      { name: 'Xiangyu Zhao', orgs: ['City University of Hong Kong'] },
+    ],
     id: 'AXRMBC8j7c',
   },
   {
     title: 'Memory as a Service (MaaS): Purpose-Bound Memory Mediation for Cooperative Agents',
-    authors: 'Haichang Li',
+    authors: [
+      { name: 'Haichang Li', orgs: ['George Mason University'] },
+    ],
     id: 'hWEO8cKDvS',
   },
   {
     title: 'Position: Coding Benchmarks Are Misaligned with Agentic Software Engineering',
-    authors: 'Maria I. Gorinova, Macey Baker, Amy Heineike, Maksim Shaposhnikov, Rob Willoughby, Dru Knox',
+    authors: [
+      { name: 'Maria I. Gorinova', orgs: ['Tessl'] },
+      { name: 'Macey Baker', orgs: ['Tessl'] },
+      { name: 'Amy Heineike', orgs: ['Tessl'] },
+      { name: 'Maksim Shaposhnikov', orgs: ['Tessl'] },
+      { name: 'Rob Willoughby', orgs: ['Tessl'] },
+      { name: 'Dru Knox', orgs: ['Tessl'] },
+    ],
     id: 't32Hgnk7ou',
   },
   {
     title: 'RANGER: Repository-level Agent for Graph-Enhanced Retrieval',
-    authors: 'Pratik Shah, Rajat Ghosh, Aryan Singhal, Debojyoti Dutta',
+    authors: [
+      { name: 'Pratik Shah', orgs: ['Georgia Institute of Technology'] },
+      { name: 'Rajat Ghosh', orgs: ['Nutanix'] },
+      { name: 'Aryan Singhal', orgs: ['Nutanix'] },
+      { name: 'Debojyoti Dutta', orgs: ['Nutanix'] },
+    ],
     id: 'WBCZRyP0HB',
   },
   {
     title: 'Rethinking Failure Attribution in Multi-Agent Systems: A Multi-Perspective Benchmark and Evaluation',
-    authors: 'Yeonjun In, Mehrab Tanjim, Jayakumar Subramanian, Sungchul Kim, Uttaran Bhattacharya, Wonjoong Kim, Sangwu Park, Somdeb Sarkhel, Chanyoung Park',
+    authors: [
+      { name: 'Yeonjun In', orgs: ['KAIST'] },
+      { name: 'Mehrab Tanjim', orgs: ['Adobe Research'] },
+      { name: 'Jayakumar Subramanian', orgs: ['Adobe Research'] },
+      { name: 'Sungchul Kim', orgs: ['Adobe Research'] },
+      { name: 'Uttaran Bhattacharya', orgs: ['Adobe Research'] },
+      { name: 'Wonjoong Kim', orgs: ['KAIST'] },
+      { name: 'Sangwu Park', orgs: ['KAIST'] },
+      { name: 'Somdeb Sarkhel', orgs: ['Adobe Research'] },
+      { name: 'Chanyoung Park', orgs: ['KAIST'] },
+    ],
     type: 'Oral',
     id: 'oBaY1EFz6z',
   },
   {
     title: 'Self-EvolveRec: Self-Evolving Recommender Systems with LLM-based Directional Feedback',
-    authors: 'Sein Kim, Sangwu Park, HongSeok Kang, Wonjoong Kim, Jimin Seo, Yeonjun In, Kanghoon Yoon, Hyunsik Jeon, Chanyoung Park',
+    authors: [
+      { name: 'Sein Kim', orgs: ['KAIST'] },
+      { name: 'Sangwu Park', orgs: ['KAIST'] },
+      { name: 'HongSeok Kang', orgs: ['KAIST'] },
+      { name: 'Wonjoong Kim', orgs: ['KAIST'] },
+      { name: 'Jimin Seo', orgs: ['KAIST'] },
+      { name: 'Yeonjun In', orgs: ['KAIST'] },
+      { name: 'Kanghoon Yoon', orgs: ['KAIST'] },
+      { name: 'Hyunsik Jeon', orgs: ['Microsoft'] },
+      { name: 'Chanyoung Park', orgs: ['KAIST'] },
+    ],
     type: 'Oral',
     id: 'fBLhmZ1aNN',
   },
   {
     title: 'Skill-as-API: Confidential Multi-Agent Coordination for Agentic Software Engineering',
-    authors: 'Ziwei Zhao, Yu Gu, Haojun Liang, Chen Zhang, Xizhi Ding',
+    authors: [
+      { name: 'Ziwei Zhao', orgs: ['Technical University of Munich'] },
+      { name: 'Yu Gu', orgs: ['Technical University of Munich'] },
+      { name: 'Haojun Liang', orgs: ['Technical University of Munich'] },
+      { name: 'Chen Zhang', orgs: ['Technical University of Munich'] },
+      { name: 'Xizhi Ding', orgs: ['London Business School'] },
+    ],
     id: 'mBwHulqlqO',
   },
   {
     title: 'SVRepair: Structured Visual Reasoning for Automated Program Repair',
-    authors: 'Jincheng Wang, Liwei Luo, Xiaoxuan Tang, Jingxuan Xu, Sheng Zhou, Dajun Chen, Wei Jiang, Yong Li',
+    authors: [
+      { name: 'Jincheng Wang', orgs: ['Ant Group'] },
+      { name: 'Liwei Luo', orgs: ['Ant Group'] },
+      { name: 'Xiaoxuan Tang', orgs: [] },
+      { name: 'Jingxuan Xu', orgs: ['Ant Group'] },
+      { name: 'Sheng Zhou', orgs: ['Zhejiang University'] },
+      { name: 'Dajun Chen', orgs: ['Ant Group'] },
+      { name: 'Wei Jiang', orgs: ['Ant Group'] },
+      { name: 'Yong Li', orgs: ['Ant Group'] },
+    ],
     type: 'Oral',
     id: '7vFgF9DV1G',
   },
   {
     title: 'When Does Restricting a Coding Agent to `execute_code` Help? A Regime × Agent-Design Ablation',
-    authors: 'Hong Yang, Qi Yu, Travis Desell',
+    authors: [
+      { name: 'Hong Yang', orgs: ['Rochester Institute of Technology'] },
+      { name: 'Qi Yu', orgs: ['Rochester Institute of Technology'] },
+      { name: 'Travis Desell', orgs: ['Rochester Institute of Technology'] },
+    ],
     id: 'kbkm1Y4BtY',
   },
   {
     title: 'Tracing the Messy Middle: A Runtime Transaction Schema for AI Coding Agents',
-    authors: 'Yuelin Hou, Haorui Li, Lu Chen, Zhen Chen',
+    authors: [
+      { name: 'Yuelin Hou', orgs: ['QingCheng.AI', 'Duke University'] },
+      { name: 'Haorui Li', orgs: ['QingCheng.AI'] },
+      { name: 'Lu Chen', orgs: ['QingCheng.AI', 'Fudan University'] },
+      { name: 'Zhen Chen', orgs: ['QingCheng.AI', 'University of Science and Technology of China'] },
+    ],
     id: 'GwP03jl6Ux',
   },
   {
     title: 'Trust but Verify? Uncovering the Security Debt of Autonomous Coding Agents',
-    authors: 'A H M Nazmus Sakib, Dipayan Banik, Murtuza Jadliwala',
+    authors: [
+      { name: 'A H M Nazmus Sakib', orgs: ['University of Texas at San Antonio'] },
+      { name: 'Dipayan Banik', orgs: ['Danovo Energy Solutions'] },
+      { name: 'Murtuza Jadliwala', orgs: ['University of Texas at San Antonio'] },
+    ],
     id: 'K9Wv2pVlIZ',
   },
   {
     title: 'Understanding Human Review Behavior in Agent-Authored Pull Requests: Evidence from AIDev',
-    authors: 'Chen Zhang, Junxi Wang, Shihong Huang',
+    authors: [
+      { name: 'Chen Zhang', orgs: ['Nanjing University'] },
+      { name: 'Junxi Wang', orgs: ['Hefei University of Technology'] },
+      { name: 'Shihong Huang', orgs: ['Nanjing Agricultural University'] },
+    ],
     id: '57OKmT7Wlz',
   },
   {
     title: 'Task-Specialized Harness Refinement Across Financial Decision Tasks',
-    authors: 'Jinuk Lee',
+    authors: [
+      { name: 'Jinuk Lee', orgs: ['Kyungpook National University'] },
+    ],
     id: '9LHVuRrbYx',
   },
-].sort((a, b) => a.title.localeCompare(b.title))
+]
+
+// One org shared by all authors → plain org line; otherwise superscript markers
+// per author, with a numbered org legend below.
+function formatPaperAuthors(authors) {
+  const orgs = []
+  for (const a of authors) {
+    for (const o of a.orgs) if (!orgs.includes(o)) orgs.push(o)
+  }
+  const multi = orgs.length > 1
+  const authorsHtml = authors
+    .map((a) => {
+      const marks = a.orgs.map((o) => orgs.indexOf(o) + 1)
+      return a.name + (multi && marks.length ? `<sup>${marks.join(',')}</sup>` : '')
+    })
+    .join(', ')
+  const affilHtml = multi
+    ? orgs.map((o, i) => `<sup>${i + 1}</sup>${o}`).join(' &nbsp;·&nbsp; ')
+    : orgs[0] || ''
+  return { authorsHtml, affilHtml }
+}
+
+const acceptedPapers = acceptedPapersData
+  .map((p) => ({ ...p, ...formatPaperAuthors(p.authors) }))
+  .sort((a, b) => a.title.localeCompare(b.title))
 
 const oralPapers = acceptedPapers.filter((paper) => paper.type === 'Oral')
 
@@ -206,7 +342,8 @@ const keynoteSpeakers = [
   {
     id: 'speaker-behrooz',
     name: 'Behrooz Omidvar-Tehrani',
-    affiliation: 'Science Lead @ AWS Agentic AI',
+    role: 'Science Lead',
+    organization: 'AWS Agentic AI',
     website: 'https://www.linkedin.com/in/behroozomidvar',
     photo: '/images/behrooz.png',
     time: '10:10 – 11:00',
@@ -326,43 +463,6 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
             Anchored by the <a href="https://huggingface.co/datasets/hao-li/AIDev" target="_blank" rel="noopener noreferrer" style="color: var(--accent-dark); font-weight: bold; text-decoration: none;">AIDev dataset</a> — over one million agentic pull requests
             from Claude Code, OpenAI Codex, and GitHub Copilot.
           </p>
-          <a href="https://kdd2026.kdd.org" target="_blank" rel="noopener" class="btn-register">
-            <i class="bi bi-box-arrow-up-right"></i> Register at KDD 2026
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Hero Image -->
-  <section class="hero-image-section mb-5">
-    <div class="container">
-      <div class="hero-image-container"></div>
-    </div>
-  </section>
-
-  <!-- Overview -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Workshop Overview</h2>
-      <hr class="section-divider">
-      <div class="row">
-        <div class="col-lg-10">
-          <p class="lead" style="font-size: 1.05rem;">
-            We are witnessing the emergence of <strong>Agentic Software Engineering (SE 3.0)</strong>,
-            where AI agents act as autonomous AI Teammates performing complex tasks such as coding,
-            debugging, and testing. As AI Teammates generate a vast new category of digital artifacts,
-            they introduce unique opportunities and challenges related to human-AI collaboration,
-            trustworthiness, and economic impact.
-          </p>
-          <p style="font-size: 1.02rem; color: var(--text-muted);">
-            This workshop serves as the premier forum for addressing these challenges, anchored by the
-            launch of the <a href="https://huggingface.co/datasets/hao-li/AIDev" target="_blank" rel="noopener noreferrer" style="font-weight: bold; color: inherit; text-decoration: underline;">AIDev dataset</a>. Comprising over one million agentic pull requests generated
-            by AI Teammates such as Claude Code, OpenAI Codex, and GitHub Copilot, AIDev provides the
-            empirical evidence needed to understand the behaviors of AI Teammates. This workshop features
-            insights from major industry players and academic pioneers, and aims to define a roadmap for
-            a world where AI Teammates and human developers build the future together.
-          </p>
         </div>
       </div>
     </div>
@@ -391,14 +491,15 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
                 <div class="schedule-oral-list">
                   <div v-for="paper in oralPapers" :key="paper.id" class="schedule-oral-item">
                     <a class="schedule-oral-title" :href="`https://openreview.net/pdf?id=${paper.id}`" target="_blank" rel="noopener noreferrer">{{ paper.title }}</a>
-                    <span class="schedule-oral-authors">{{ paper.authors }}</span>
+                    <span class="schedule-oral-authors" v-html="paper.authorsHtml"></span>
+                    <span v-if="paper.affilHtml" class="schedule-oral-affiliations" v-html="paper.affilHtml"></span>
                   </div>
                 </div>
               </td>
             </tr>
             <tr><td>9:00 – 10:10</td><td><a href="#" @click.prevent="scrollTo('accepted-papers')" class="schedule-link">Poster Session</a> (ICC 1 Foyer, between Halla and Samda Hall) + Coffee Break (coffee served 9:30 – 10:00)</td></tr>
-            <tr><td>10:10 – 11:00</td><td>Keynote Talk: <em><a href="#" @click.prevent="scrollTo('keynote')" class="schedule-link">{{ keynoteSpeakers[0].title }}</a></em> — {{ keynoteSpeakers[0].name }}</td></tr>
-            <tr><td>11:00 – 12:00</td><td>Discussion Session</td></tr>
+            <tr><td>10:10 – 11:00</td><td>Keynote: <em><a href="#" @click.prevent="scrollTo('keynote')" class="schedule-link">{{ keynoteSpeakers[0].title }}</a></em> — {{ keynoteSpeakers[0].name }} <span class="schedule-keynote-org">({{ keynoteSpeakers[0].organization }})</span></td></tr>
+            <tr><td>11:00 – 12:00</td><td>Discussion Session: Mining the AI Teammate – Data, Discovery, and the Future of Agentic Software Engineering</td></tr>
           </tbody>
         </table>
       </div>
@@ -421,7 +522,8 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
                 {{ speaker.name }}
               </a>
             </h5>
-            <p class="affiliation mb-0">{{ speaker.affiliation }}</p>
+            <p class="affiliation mb-0">{{ speaker.role }}</p>
+            <p class="speaker-organization mb-0">{{ speaker.organization }}</p>
           </div>
           <div class="col-md-9">
             <h4 class="fw-bold mb-2" style="color: var(--accent-dark);">{{ speaker.title }}</h4>
@@ -452,15 +554,43 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
               </h3>
               <span v-if="paper.type === 'Oral'" class="accepted-paper-tag">Oral</span>
             </div>
-            <p class="accepted-paper-authors">{{ paper.authors }}</p>
+            <p class="accepted-paper-authors" v-html="paper.authorsHtml"></p>
+            <p v-if="paper.affilHtml" class="accepted-paper-affiliations" v-html="paper.affilHtml"></p>
           </article>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Overview -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Workshop Overview</h2>
+      <hr class="section-divider">
+      <div class="row">
+        <div class="col-lg-10">
+          <p class="lead" style="font-size: 1.05rem;">
+            We are witnessing the emergence of <strong>Agentic Software Engineering (SE 3.0)</strong>,
+            where AI agents act as autonomous AI Teammates performing complex tasks such as coding,
+            debugging, and testing. As AI Teammates generate a vast new category of digital artifacts,
+            they introduce unique opportunities and challenges related to human-AI collaboration,
+            trustworthiness, and economic impact.
+          </p>
+          <p style="font-size: 1.02rem; color: var(--text-muted);">
+            This workshop serves as the premier forum for addressing these challenges, anchored by the
+            launch of the <a href="https://huggingface.co/datasets/hao-li/AIDev" target="_blank" rel="noopener noreferrer" style="font-weight: bold; color: inherit; text-decoration: underline;">AIDev dataset</a>. Comprising over one million agentic pull requests generated
+            by AI Teammates such as Claude Code, OpenAI Codex, and GitHub Copilot, AIDev provides the
+            empirical evidence needed to understand the behaviors of AI Teammates. This workshop features
+            insights from major industry players and academic pioneers, and aims to define a roadmap for
+            a world where AI Teammates and human developers build the future together.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Submission / CTA -->
-  <section id="submission" class="section">
+  <section id="submission" class="section section-alt">
     <div class="container">
       <h2 class="section-title">Call for Papers</h2>
       <hr class="section-divider">
@@ -503,7 +633,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   </section>
 
   <!-- Important Dates -->
-  <section id="dates" class="section section-alt">
+  <section id="dates" class="section">
     <div class="container">
       <h2 class="section-title">Important Dates</h2>
       <hr class="section-divider">
@@ -521,7 +651,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   </section>
 
   <!-- Reviewer Self-Nomination -->
-  <section id="reviewer" class="section">
+  <section id="reviewer" class="section section-alt">
     <div class="container">
       <h2 class="section-title">Reviewer Self-Nomination</h2>
       <hr class="section-divider">
@@ -539,7 +669,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   </section>
 
   <!-- Organizers -->
-  <section id="organizers" class="section section-alt">
+  <section id="organizers" class="section">
     <div class="container">
       <h2 class="section-title">Organizing Committee</h2>
       <hr class="section-divider">
@@ -566,7 +696,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   </section>
 
   <!-- Program Committee -->
-  <section id="committee" class="section">
+  <section id="committee" class="section section-alt">
     <div class="container">
       <h2 class="section-title">Program Committee</h2>
       <hr class="section-divider">
