@@ -1,0 +1,34 @@
+# Agentic Software Engineering (SE 3.0) — KDD 2026 Workshop
+
+> Half-day workshop at ACM SIGKDD 2026 on Agentic Software Engineering (SE 3.0): The Rise of AI Teammates. August 9, 2026 (morning), Room Samda B, Jeju International Convention Center, Jeju, Korea. Co-located with ACM SIGKDD 2026 (https://kdd2026.kdd.org/).
+
+The workshop is anchored by the AIDev dataset — over one million agentic pull requests authored by AI coding agents on GitHub (https://huggingface.co/datasets/hao-li/AIDev).
+
+## Topics
+
+- Mining agent-generated artifacts: analyzing code, PRs, and commits produced by AI teammates at scale
+- Human-agent collaboration and alignment
+- Trustworthiness and reliability of agent outputs
+- Multi-agent coordination and orchestration
+- Agent tool use and environments (IDEs, CI/CD, development tools)
+- Failure modes and root causes of AI agent errors
+- Safety, ethics, and compliance of AI teammates
+- Adoption and productivity impact of AI agents on developer workflows
+- Economic cost and impact of agentic software development
+- AgentOps and release engineering
+
+## Key dates
+
+- Paper submission: closed (June 1, 2026)
+- Notification: June 10, 2026
+- Workshop: August 9, 2026, at KDD 2026, Jeju, Korea
+
+## Program
+
+Half-day (morning) program with a keynote, oral presentations of accepted papers, and discussion. Accepted papers are listed with OpenReview links on the workshop website.
+
+## Links
+
+- Website: https://agent-se.github.io/
+- KDD 2026: https://kdd2026.kdd.org/
+- AIDev dataset: https://huggingface.co/datasets/hao-li/AIDev

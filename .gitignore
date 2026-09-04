@@ -2,6 +2,8 @@ node_modules/
 docs/.vitepress/dist
 docs/.vitepress/cache
 docs/.vitepress/.temp
+pdfs/
+slides/
 
 .claude
 .vscode
